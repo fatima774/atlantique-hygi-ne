@@ -1,0 +1,216 @@
+/* Variables de couleurs */
+:root {
+  --green-dark: #0b3d0b;
+  --green-medium: #064d1f;
+  --green-light: #a3d9a5;
+  --white-transparent: rgba(255 255 255 / 0.5);
+}
+
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #d0f0fd 0%, var(--green-light) 100%);
+  color: var(--green-dark);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  padding: 30px 20px 10px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  background: rgba(255 255 255 / 0.7);
+  backdrop-filter: blur(6px);
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: contain;
+  background-color: white;
+  padding: 10px;
+  box-sizing: border-box; /* IMPORTANT : padding ne fait pas grandir la boîte */
+  margin-bottom: 10px;
+  display: block;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+
+header h1 {
+  font-size: 3.2rem;
+  margin: 0;
+  text-shadow: 1px 1px 4px var(--green-light);
+  line-height: 1.2;
+}
+
+/* NAVIGATION */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 20px 0 40px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--green-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 10px 18px;
+  border-radius: 30px;
+  background: var(--white-transparent);
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+nav ul li a.active,
+nav ul li a:hover,
+nav ul li a:focus {
+  background: var(--green-light);
+  color: var(--green-dark);
+  outline: none;
+  box-shadow: 0 0 5px var(--green-light);
+}
+
+/* MAIN CONTENT */
+main {
+  max-width: 960px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.intro h2 {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--green-medium);
+}
+
+.intro p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-shadow: 0 0 3px rgba(255 255 255 0.7);
+  margin-bottom: 50px;
+}
+
+/* ECO BULLES */
+.eco-bulles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.bulle {
+  background: rgba(255 255 255 / 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 50% / 60%;
+  width: 160px;
+  height: 160px;
+  color: var(--green-dark);
+  font-weight: 700;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: default;
+  user-select: none;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  text-align: center;
+  line-height: 1.2;
+  will-change: transform, box-shadow;
+}
+
+.bulle:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* CALL TO ACTION */
+.cta .btn-devis {
+  display: inline-block;
+  background: var(--green-medium);
+  color: white;
+  font-weight: 700;
+  padding: 15px 35px;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta .btn-devis:hover,
+.cta .btn-devis:focus {
+  background: var(--green-dark);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+/* FOOTER */
+footer {
+  background: var(--green-light);
+  color: var(--green-dark);
+  text-align: center;
+  font-weight: 600;
+  padding: 20px 10px;
+  border-top: 3px solid #6ca36c;
+  box-shadow: inset 0 4px 5px rgba(255 255 255, 0.3);
+  user-select: none;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--green-dark);
+  text-decoration: none;
+  margin: 0 6px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--green-medium);
+  text-decoration: underline;
+  outline: none;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .bulle {
+    width: 120px;
+    height: 120px;
+    font-size: 1rem;
+    border-radius: 50% / 70%;
+  }
+}
