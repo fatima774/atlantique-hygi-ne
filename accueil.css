@@ -22,7 +22,34 @@ body {
   display: flex;
   flex-direction: column;
 }
+.galerie {
+  padding: 40px 20px;
+  text-align: center;
+}
 
+.galerie h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #064d1f;
+}
+
+.galerie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.galerie-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.galerie-container img:hover {
+  transform: scale(1.05);
 /* HEADER */
 header {
   padding: 30px 20px 10px;
