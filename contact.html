@@ -71,5 +71,26 @@
     </div>
     <p>&copy; 2025 Hygiène Propreté Services</p>
   </footer>
+  <script>
+  function initMap() {
+    const location = { lat: 48.9119, lng: 2.2390 }; // Coordonnées de Colombes
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 15,
+      center: location,
+    });
+    const marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      title: "Atlantique Hygiène - Colombes",
+    });
+  }
+</script>
+
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsVfeqnLax2zqozlteQd1M24hGxbGg-XEI&callback=initMap"
+  async
+  defer
+></script>
+
 </body>
 </html>
