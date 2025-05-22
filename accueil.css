@@ -240,59 +240,70 @@ footer a:focus {
     font-size: 1rem;
     border-radius: 50% / 70%;
   }
-  /* Centrer le formulaire dans la section contact */
-main section {
-  max-width: 600px;        /* largeur max pour le formulaire */
-  margin: 40px auto;       /* centrer horizontalement avec un peu d’espace vertical */
-  padding: 20px;
-  background: rgba(255 255 255 / 0.85); /* fond semi-transparent pour mieux voir */
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.contact-section {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px 25px;
+  background: rgba(255 255 255 / 0.9);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   text-align: left;
+  color: #064d1f;
+  font-family: 'Poppins', sans-serif;
 }
 
-main section form label {
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.contact-section form label {
   display: block;
   font-weight: 600;
-  margin-bottom: 8px;
-  color: var(--green-dark);
+  margin-bottom: 6px;
 }
 
-main section form input[type="email"],
-main section form textarea {
+.contact-section form input[type="email"],
+.contact-section form textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid var(--green-light);
-  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #a3d9a5;
+  border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
-  resize: vertical;
   box-sizing: border-box;
-  margin-bottom: 20px;
 }
 
-main section form button {
-  background-color: var(--green-medium);
+.contact-section form textarea {
+  resize: vertical;
+}
+
+.contact-section form button {
+  display: block;
+  background-color: #064d1f;
   color: white;
   font-weight: 700;
-  padding: 12px 25px;
+  padding: 12px 30px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 0 auto;
 }
 
-main section form button:hover,
-main section form button:focus {
-  background-color: var(--green-dark);
+.contact-section form button:hover,
+.contact-section form button:focus {
+  background-color: #0b3d0b;
   outline: none;
 }
 
-/* Garder le texte du contact aligné à gauche */
-main section p {
-  text-align: left;
-  margin-top: 30px;
+.contact-section p {
+  margin-top: 35px;
   font-weight: 600;
+  text-align: center;
 }
+
 
 }
