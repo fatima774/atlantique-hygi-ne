@@ -37,12 +37,12 @@ body {
 }
 /* HEADER */
 header {
-  background: linear-gradient(135deg, #3a9bdc, #49c27c);
+  background: linear-gradient(135deg, #6ec1e4, #9be7c4);
   padding: 40px 20px 30px;
-  box-shadow: 0 5px 15px rgba(30, 110, 80, 0.25);
+  box-shadow: 0 5px 15px rgba(50, 120, 100, 0.15);
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
-  color: #004d26;
+  color: #2a5d42;
   user-select: none;
 }
 
@@ -65,17 +65,18 @@ header {
   border-radius: 50%;
   padding: 15px;
   box-shadow:
-    0 8px 20px rgba(0, 100, 60, 0.25),
-    inset 0 0 12px #76d18a;
+    0 8px 20px rgba(30, 100, 80, 0.15),
+    inset 0 0 12px #b5e8cf;
   object-fit: contain;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .logo:hover {
   transform: scale(1.1);
   box-shadow:
-    0 12px 30px rgba(0, 120, 80, 0.4),
-    inset 0 0 16px #a6f3b1;
+    0 12px 30px rgba(30, 120, 100, 0.3),
+    inset 0 0 16px #d4f3db;
   cursor: pointer;
 }
 
@@ -85,8 +86,8 @@ header h1 {
   font-weight: 700;
   font-size: clamp(2.8rem, 6vw, 4rem);
   margin: 0;
-  color: #004d26;
-  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7);
+  color: #2a5d42;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
   user-select: text;
 }
 
@@ -122,9 +123,8 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a:focus,
 nav ul li a.active {
-  background-color: #76d18a;
-  color: #003311;
-  outline: none;
+  background-color: #9be7c4;
+  color: #1c3b24;
   font-weight: 700;
 }
 
