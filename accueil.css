@@ -35,65 +35,61 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* ===== Header ===== */
+/* HEADER */
 header {
-  background: linear-gradient(135deg, #2b6d39, #1b3a2d);
-  padding: 40px 24px 36px;
-  border-bottom-left-radius: 36px;
-  border-bottom-right-radius: 36px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
-  color: #e6f2e6;
+  background: linear-gradient(135deg, #3a9bdc, #49c27c);
+  padding: 40px 20px 30px;
+  box-shadow: 0 5px 15px rgba(30, 110, 80, 0.25);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  color: #004d26;
   user-select: none;
 }
 
-.logo {
-  border-radius: 50%;
-  width: 140px;
-  height: 140px;
-  object-fit: contain;
-  padding: 16px;
-  background: linear-gradient(145deg, #3ecf8e, #1b3a2d);
-  box-shadow:
-    0 8px 20px rgba(62, 207, 142, 0.65),
-    inset 0 -6px 10px #27ae60,
-    inset 0 6px 10px #4dd07a;
-  transition: box-shadow 0.35s ease;
-}
+/* Conteneur logo + titre */
 .header-container {
   max-width: 1100px;
-  margin: 0 auto 24px;
+  margin: 0 auto 20px;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 25px;
   flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
 }
-.logo:hover,
-.logo:focus {
+
+/* Logo dans une forme arrondie avec ombre */
+.logo {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  padding: 15px;
   box-shadow:
-    0 0 28px 6px #3ecf8e,
-    inset 0 -8px 14px #27ae60,
-    inset 0 8px 14px #4dd07a;
-  outline: none;
+    0 8px 20px rgba(0, 100, 60, 0.25),
+    inset 0 0 12px #76d18a;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 12px 30px rgba(0, 120, 80, 0.4),
+    inset 0 0 16px #a6f3b1;
   cursor: pointer;
 }
 
+/* Nom de l'entreprise */
 header h1 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 900;
-  font-size: clamp(3rem, 6vw, 4rem);
+  font-weight: 700;
+  font-size: clamp(2.8rem, 6vw, 4rem);
   margin: 0;
-  background: linear-gradient(90deg, #a3e3af 0%, #1b3a2d 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow:
-    2px 2px 6px rgba(0,0,0,0.18),
-    0 0 18px rgba(29,87,39,0.8);
-  letter-spacing: 0.1em;
+  color: #004d26;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7);
   user-select: text;
 }
+
 /* Navigation */
 nav {
   max-width: 1100px;
@@ -106,7 +102,7 @@ nav ul {
   padding: 0;
   margin: 0;
   display: inline-flex;
-  gap: 36px;
+  gap: 40px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -115,31 +111,30 @@ nav ul li a {
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 1.1rem;
-  color: #cde6cdcc;
-  padding: 6px 12px;
-  border-radius: 8px;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  font-size: 1.15rem;
+  color: #004d26cc;
+  padding: 10px 18px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
   user-select: none;
 }
 
 nav ul li a:hover,
 nav ul li a:focus,
 nav ul li a.active {
-  background-color: #3ecf8e;
-  color: #1b3a2d;
+  background-color: #76d18a;
+  color: #003311;
   outline: none;
-  box-shadow: 0 0 8px #3ecf8e;
+  font-weight: 700;
 }
 
-/* Responsive menu */
+/* Responsive */
 @media (max-width: 600px) {
   .header-container {
-    flex-direction: column;
-    gap: 18px;
+    justify-content: center;
   }
   nav ul {
-    gap: 18px;
+    gap: 20px;
   }
 }
 
