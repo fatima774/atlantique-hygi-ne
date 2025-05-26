@@ -12,6 +12,76 @@
   --background-overlay: rgba(255, 255, 255, 0.9);
   --focus-outline: #3ecf8e;
 }
+/* Style des bulles éco sur la page d'accueil */
+.eco-bulles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px auto 60px;
+  max-width: 900px;
+  padding: 0 10px;
+}
+
+.bulle {
+  background: var(--green-light);
+  color: var(--green-dark);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%; /* Cercle parfait */
+  box-shadow: 0 8px 20px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: 
+    background-color 0.3s ease, 
+    color 0.3s ease, 
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+  padding: 15px;
+}
+
+.bulle i {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: var(--green-medium);
+  transition: color 0.3s ease;
+}
+
+.bulle:hover,
+.bulle:focus {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 12px 36px var(--accent);
+  transform: scale(1.15);
+  outline: none;
+}
+
+.bulle:hover i,
+.bulle:focus i {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .eco-bulles {
+    gap: 22px;
+  }
+  .bulle {
+    width: 120px;
+    height: 120px;
+    font-size: 1rem;
+  }
+  .bulle i {
+    font-size: 2.2rem;
+  }
+}
 
 /* ===== Reset & Global styles ===== */
 *,
