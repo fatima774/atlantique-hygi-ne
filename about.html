@@ -173,5 +173,22 @@
     </div>
     <p>&copy; 2025 Atlantique Hygiène - Tous droits réservés</p>
   </footer>
+  <script>
+  const bubbles = document.querySelectorAll('.bubble');
+  const details = document.querySelectorAll('.team-details');
+
+  bubbles.forEach((bubble, index) => {
+    bubble.addEventListener('click', () => {
+      // Désactive toutes les bulles
+      bubbles.forEach(b => b.classList.remove('active'));
+      // Cache toutes les descriptions
+      details.forEach(d => d.style.display = 'none');
+
+      // Active la bulle cliquée
+      bubble.classList.add('active');
+      // Affiche la description correspondante
+      details[index].style.display = 'block';
+    });
+  });
 </body>
 </html>
