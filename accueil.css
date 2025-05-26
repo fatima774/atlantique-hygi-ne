@@ -12,6 +12,53 @@
   --background-overlay: rgba(255, 255, 255, 0.9);
   --focus-outline: #3ecf8e;
 }
+.organisation-values {
+  background-color: #f5fdf8;
+  padding: 50px 20px;
+  border-radius: 16px;
+  max-width: 1000px;
+  margin: 60px auto;
+}
+
+.organisation-values h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #1b4332;
+  margin-bottom: 40px;
+}
+
+.organisation-values .block {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #ffffff;
+  border-left: 6px solid #52b788;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.organisation-values h3 {
+  margin-top: 0;
+  color: #2d6a4f;
+  font-size: 1.5rem;
+}
+
+.organisation-values p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .organisation-values {
+    padding: 30px 15px;
+  }
+
+  .organisation-values h2 {
+    font-size: 2rem;
+  }
+}
+
 .team-section {
   padding: 40px 20px;
   background-color: #f9f9f9;
