@@ -209,6 +209,35 @@ main:focus-within {
   color: var(--green-medium);
   text-shadow: 0 2px 8px var(--green-light);
 }
+.cta {
+  margin: 40px auto 60px;
+  text-align: center;
+}
+
+.btn-devis {
+  display: inline-block;
+  padding: 16px 38px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #27ae60, #1b3a2d);
+  border-radius: 40px;
+  box-shadow: 0 8px 20px rgba(39, 174, 96, 0.5);
+  text-decoration: none;
+  transition: 
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.3s ease;
+  user-select: none;
+}
+
+.btn-devis:hover,
+.btn-devis:focus {
+  background: linear-gradient(135deg, #3ecf8e, #1b3a2d);
+  box-shadow: 0 12px 32px rgba(62, 207, 142, 0.7);
+  transform: scale(1.1);
+  outline: none;
+}
 
 .intro p {
   font-size: 1.22rem;
