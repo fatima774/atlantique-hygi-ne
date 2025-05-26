@@ -22,7 +22,37 @@
   max-width: 900px;
   padding: 0 10px;
 }
-
+.about-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .about-section h2 {
+      color: #1b3a2d;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      border-bottom: 3px solid #3ecf8e;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+    .info-list {
+      background: #f7fbf8;
+      border: 1px solid #a8d5ba;
+      border-radius: 12px;
+      padding: 20px 30px;
+      margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(39, 174, 96, 0.1);
+    }
+    .info-list p {
+      margin: 12px 0;
+    }
+    .info-list strong {
+      color: #27ae60;
+    }
+  </style>
 .bulle {
   background: var(--green-light);
   color: var(--green-dark);
