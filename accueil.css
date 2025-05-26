@@ -375,6 +375,16 @@ main:focus-within {
   font-weight: 600;
   line-height: 1.55;
 }
+footer .social-links a {
+  color: var(--green-medium);
+  transition: color 0.3s ease;
+}
+
+footer .social-links a:hover,
+footer .social-links a:focus {
+  color: var(--accent);
+  outline: none;
+}
 
 /* ===== Footer ===== */
 footer {
