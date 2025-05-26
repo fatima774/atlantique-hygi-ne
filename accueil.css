@@ -278,43 +278,53 @@ main:focus-within {
   border-color: var(--accent);
   outline: none;
 }
-
-/* ECO BULLES */
 .eco-bulles {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 34px;
-  margin-bottom: 48px;
+  gap: 28px;
+  margin: 50px 0;
+  padding: 10px;
 }
 
 .bulle {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.32) 70%, #c0f3d6 100%);
-  backdrop-filter: blur(12px);
-  border-radius: 50% / 62%;
-  width: 170px;
-  height: 170px;
-  color: var(--green-dark);
-  font-weight: 700;
-  font-size: 1.17rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 26px;
-  box-shadow: 0 10px 26px var(--shadow-color);
-  cursor: default;
-  user-select: none;
-  transition: transform 0.33s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.22s ease, background 0.33s ease;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(145deg, #f4fff6, #d5f5dd);
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  line-height: 1.22;
+  padding: 15px;
+  color: var(--green-dark);
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid #b8e8c8;
 }
 
-.bulle:hover,
-.bulle:focus {
-  transform: scale(1.17) rotate(7deg);
-  box-shadow: 0 16px 36px var(--shadow-hover);
-  background: linear-gradient(135deg, #c0f3d6 70%, #e9fcf4 100%);
-  outline: none;
+.bulle:hover {
+  transform: scale(1.07);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, #d5f5dd, #c0f3d6);
+}
+
+.bulle i {
+  font-size: 2.2rem;
+  color: var(--green-medium);
+  margin-bottom: 10px;
+}
+
+.bulle span {
+  display: block;
+  color: var(--green-dark);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 /* CALL TO ACTION */
