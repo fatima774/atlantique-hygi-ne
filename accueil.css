@@ -58,13 +58,7 @@
     font-size: 2rem;
   }
 }
-.team-details {
-  display: none;
-  margin-top: 38px;
-}
-.team-details.show {
-  display: block;
-}
+
 .team-section {
   padding: 40px 20px;
   background-color: #f9f9f9;
@@ -117,7 +111,34 @@
   padding: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.team-details {
+  display: none;
+  margin-top: 38px;
+  background-color: white;
+  padding: 25px 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: #34495e;
+  line-height: 1.6;
+  min-height: 220px;
+}
+.team-details.show {
+  display: block;
+}
 
+.team-details h3 {
+  margin-top: 0;
+  color: #34495e;
+}
+
+.team-details ul {
+  margin: 15px 0 0 20px;
+  padding-left: 0;
+}
+
+.team-details ul li {
+  margin-bottom: 8px;
+}
 .bulle i {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -147,29 +168,9 @@
   transform: scale(1.1);
 }
 
-.team-details {
-  background-color: white;
-  padding: 25px 30px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  color: #34495e;
-  line-height: 1.6;
-  min-height: 220px;
-}
 
-.team-details h3 {
-  margin-top: 0;
-  color: #34495e;
-}
 
-.team-details ul {
-  margin: 15px 0 0 20px;
-  padding-left: 0;
-}
 
-.team-details ul li {
-  margin-bottom: 8px;
-}
 .realisations-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -224,35 +225,35 @@
   padding: 0 10px;
 }
 .about-section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #333;
-    }
-    .about-section h2 {
-      color: #1b3a2d;
-      font-weight: 700;
-      margin-top: 40px;
-      margin-bottom: 12px;
-      border-bottom: 3px solid #3ecf8e;
-      display: inline-block;
-      padding-bottom: 6px;
-    }
-    .info-list {
-      background: #f7fbf8;
-      border: 1px solid #a8d5ba;
-      border-radius: 12px;
-      padding: 20px 30px;
-      margin-top: 20px;
-      box-shadow: 0 4px 15px rgba(39, 174, 96, 0.1);
-    }
-    .info-list p {
-      margin: 12px 0;
-    }
-    .info-list strong {
-      color: #27ae60;
-    }
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+  color: #333;
+}
+.about-section h2 {
+  color: #1b3a2d;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  border-bottom: 3px solid #3ecf8e;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+.info-list {
+  background: #f7fbf8;
+  border: 1px solid #a8d5ba;
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.1);
+}
+.info-list p {
+  margin: 12px 0;
+}
+.info-list strong {
+  color: #27ae60;
+}
  
 .bulle {
   background: var(--green-light);
