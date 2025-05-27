@@ -408,24 +408,21 @@ main:focus-within {
 }
 
 /* ===== Services Section ===== */
-.services {
-  padding: 60px 20px;
-  background: var(--background-light);
-}
 
-.services h2 {
-  font-size: clamp(2.4rem, 5vw, 3rem);
-  color: var(--green-dark);
-  margin-bottom: 40px;
-  font-weight: 900;
+.services {
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(120deg, #f8fff8, #e7f5ee);
+  border-radius: 18px;
+  margin-top: 30px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 36px;
-  padding: 24px 0;
-}
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  padding: 20
 
 .service {
   background: #fff;
@@ -451,6 +448,14 @@ main:focus-within {
   transition: color 0.3s ease;
 }
 
+.services h2 {
+  font-size: 2.5rem;
+  color: #17442d;
+  margin-bottom: 30px;
+  font-weight: 800;
+  text-shadow: 1px 1px 4px #b8e8c8;
+  letter-spacing: 0.02em;
+}
 .service:hover i,
 .service:focus-within i {
   color: var(--accent);
