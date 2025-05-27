@@ -217,6 +217,7 @@
 <script>
   const bubbles = document.querySelectorAll('.bubble');
   const memberDetails = document.querySelectorAll('.member-detail');
+  const teamDetails = document.querySelector('.team-details'); // AJOUT
 
   bubbles.forEach(bubble => {
     bubble.addEventListener('click', () => {
@@ -232,11 +233,11 @@
       const target = document.getElementById(targetId);
       if (target) {
         target.style.display = 'block';
+        teamDetails.classList.add('show'); // ==> AJOUTE ÇA POUR AFFICHER LE BLOC
       }
     });
   });
 </script>
-
 
 </body>
 </html>
