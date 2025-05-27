@@ -262,7 +262,7 @@ body {
 header {
   padding: 10px 20px ;
   background: var(--background-overlay);
-  box-shadow: 0 2px 5px  rgba(0,0,0,0.1));
+  box-shadow: 0 2px 5px  rgba(0,0,0,0.1);
   border-bottom: 3px solid var(--green-light);
   backdrop-filter: saturate(180%) blur(10px);
   text-align: center;
@@ -270,6 +270,7 @@ header {
 
 .logo {
   width: 120px;
+  animation: fadeIn 0.8s ease-in-out;
   height: 120px;
   border-radius: 50%;
   background: linear-gradient(120deg, #fff 75%, var(--green-light) 100%);
@@ -279,7 +280,10 @@ header {
   transition: box-shadow 0.35s ease;
   cursor: pointer;
 }
-
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95);}
+  to { opacity: 1; transform: scale(1);}
+}
 .logo:hover,
 .logo:focus {
   box-shadow: 0 0 28px var(--accent);
