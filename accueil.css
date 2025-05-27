@@ -58,7 +58,13 @@
     font-size: 2rem;
   }
 }
-
+.team-details {
+  display: none;
+  margin-top: 38px;
+}
+.team-details.show {
+  display: block;
+}
 .team-section {
   padding: 40px 20px;
   background-color: #f9f9f9;
