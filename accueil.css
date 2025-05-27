@@ -84,24 +84,55 @@
   gap: 15px;
   margin-bottom: 30px;
 }
-
-.bubble {
-  background-color: #3498db;
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 6px rgba(52, 152, 219, 0.4);
-  min-width: 130px;
-  text-align: center;
+.eco-bulles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  margin-top: 30px;
+  justify-items: center;
 }
 
-.bubble:hover {
-  background-color: #2980b9;
-  transform: scale(1.05);
+.bulle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 160px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 50% / 60%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  color: #064d1f;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bulle i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #229a61;
+}
+
+.bulle:hover {
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  background: #c4f1d6;
+}
+
+@media (max-width: 600px) {
+  .bulle {
+    width: 120px;
+    height: 120px;
+    font-size: 0.95rem;
+  }
+  .bulle i {
+    font-size: 1.6rem;
+  }
 }
 
 .bubble.active {
