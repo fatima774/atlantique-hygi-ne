@@ -129,7 +129,7 @@ header {
   width: 120px;
   height: 120px;
   padding: 0; /* Enlève le padding pour que l'image prenne tout l'espace */
-  margin-bottom: 16px;
+  margin: 0 auto 16px auto;
   box-shadow: 0 0 18px var(--shadow-color);
   transition: box-shadow 0.35s;
   cursor: pointer;
@@ -137,7 +137,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: none; /* Plus de cercle de couleur */
+  background: none; 
+  display: flex;
 }
 
 .logo-img {
@@ -146,6 +147,7 @@ header {
   object-fit: cover;
   border-radius: 50%;
   display: block;
+  
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95);}
