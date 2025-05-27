@@ -453,7 +453,7 @@ main:focus-within {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
-  padding: 20
+  padding: 20;}
 
 .service {
   background: #fff;
