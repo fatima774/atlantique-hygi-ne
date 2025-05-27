@@ -138,7 +138,9 @@ header {
   align-items: center;
   justify-content: center;
   background: none; 
-  display: flex;
+  display: block;
+  border-radius: 50%;
+   object-fit: cover; 
 }
 
 .logo-img {
