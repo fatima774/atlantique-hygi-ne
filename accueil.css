@@ -11,55 +11,7 @@
   --background-overlay: rgba(255,255,255,0.9);
   --focus-outline: #3ecf8e;
 }
-.intro-text h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 3em;              /* très grand titre */
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
 
-.intro-text h2 .light {
-  font-weight: 400;            /* texte normal */
-  color: #1a1a40;
-}
-
-.intro-text h2 .bold {
-  font-weight: 800;            /* texte épais comme dans l'image */
-  color: #1a1a40;
-}
-
-.intro-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px;
-  gap: 60px;
-  background-color: #e8f8fc; /* optionnel, pour ressembler à ta capture */
-}
-
-.intro-image img {
-  width: 600%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.intro-text {
-  max-width: 700px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.intro-text h2 {
-  font-size: 2.5em;
-  color: #1a1a40;
-  margin-bottom: 20px;
-}
-
-.intro-text p {
-  font-size: 1.3em;
-  line-height: 1.8;
-}
 
 /* ======== SERVICES SECTION ======== */
 .services {
@@ -69,6 +21,53 @@
   border-radius: 18px;
   margin-top: 30px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+/* Structure en ligne (image + texte) */
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap; /* pour être responsive */
+}
+
+/* Image bien dimensionnée */
+.intro-image img {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Bloc texte */
+.intro-text {
+  max-width: 600px;
+}
+
+/* Titre stylé comme sur l’image de l’école */
+.intro-text h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #1a1a40;
+}
+
+.intro-text h2 .light {
+  font-weight: 400;
+}
+
+.intro-text h2 .bold {
+  font-weight: 800;
+}
+
+/* Paragraphe */
+.intro-text p {
+  font-size: 1.2em;
+  color: #444;
+  line-height: 1.6;
 }
 
     /* Le bouton menu */
