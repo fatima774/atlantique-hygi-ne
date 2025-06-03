@@ -365,6 +365,7 @@ main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
   z-index: 1;
 }
 .bubble { /* pour les boutons interactifs uniquement */
+  background-color: rgba(255, 255, 255, 0.85); 
   background: var(--green-light);
   color: var(--green-dark);
   border-radius: 50%;
@@ -377,12 +378,12 @@ main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
   font-size: 1.1rem;
   text-align: center;
   cursor: pointer;
-  box-shadow: 0 8px 20px var(--shadow-color);
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
   margin: 0 8px 12px 0;
   border: none;
   outline: none;
   user-select: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .bulle:hover {
