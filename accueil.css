@@ -341,49 +341,24 @@ main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  padding: 30px;
   background-color: #f4f4f4;
-  background-image: url('images/img2.png');
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position:center;
-  padding: 40px 20px;
-  border-radius:15px;
-  position:relative;
-}
-.eco-bulles::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3); /* voile sombre */
-  z-index: 0;
-  border-radius: 15px;
 }
 
-/* Pour que le contenu soit au-dessus de l’overlay */
-.eco-bulles > .bulle {
-  position: relative;
-  z-index: 1;
-}
-.bubble { /* pour les boutons interactifs uniquement */
-  background-color: rgba(255, 255, 255, 0.85); 
-  background: var(--green-light);
-  color: var(--green-dark);
-  border-radius: 50%;
-  width: 140px;
-  height: 140px;
+.bulle {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 1.1rem;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #e0f7ec;
+  color: #007B55;
+  font-size: 14px;
   text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
-  margin: 0 8px 12px 0;
-  border: none;
-  outline: none;
-  user-select: none;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .bulle:hover {
@@ -425,6 +400,7 @@ main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
 }
 .about-bulles .about-list li { margin-bottom: 12px; color: var(--text-muted); }
 .about-bulles .about-list strong { color: var(--green-medium); }
+
 
 /* ======== TEAM SECTION (interactive) ======== */
 .team-section {
