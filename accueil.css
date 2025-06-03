@@ -20,7 +20,7 @@
 
 /*le bouton devis gratuit - page d'accueil*/
 .cta {
-  background-color: #007BFF;
+  background-color:  var(--green-medium);
   color: white;
   padding: 10px 16px;
   text-decoration: none;
