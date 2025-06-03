@@ -12,6 +12,14 @@
   --focus-outline: #3ecf8e;
 }
 
+.btn-devis {
+  transition: box-shadow 0.4s ease;
+}
+
+.btn-devis:hover {
+  box-shadow: 0 0 12px #009688;
+  transform: translateY(-2px);
+}
 
 /* ======== SERVICES SECTION ======== */
 .services {
@@ -22,7 +30,7 @@
   margin-top: 30px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
 }
-/* Structure en ligne (image + texte) */
+/* photo+texte:accueil */
 .intro-container {
   display: flex;
   align-items: center;
@@ -31,22 +39,21 @@
   padding: 40px;
   flex-wrap: wrap; /* pour être responsive */
 }
-
-/* Image bien dimensionnée */
 .intro-image img {
   max-width: 450px;
   width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease;
 }
-
-/* Bloc texte */
+.intro-image img:hover {
+  transform: scale(1.05);
+}
 .intro-text {
   max-width: 600px;
 }
 
-/* Titre stylé comme sur l’image de l’école */
 .intro-text h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 2.8em;
@@ -54,22 +61,18 @@
   margin-bottom: 20px;
   color: #1a1a40;
 }
-
 .intro-text h2 .light {
   font-weight: 400;
 }
-
 .intro-text h2 .bold {
   font-weight: 800;
 }
 
-/* Paragraphe */
 .intro-text p {
   font-size: 1.2em;
   color: #444;
   line-height: 1.6;
 }
-
     /* Le bouton menu */
    .menu-button {
   position: fixed;
@@ -117,7 +120,9 @@
       font-size: 20px;
       color: white;
       display: block;
-      transition: 0.3s;
+    
+      transition: width 0.3s ease;
+  overflow-x: hidden;
     }
 
  .side-menu a:hover {
@@ -238,6 +243,7 @@ header {
   backdrop-filter: saturate(180%) blur(10px);
   text-align: center;
 }
+/* logo*/
 .logo {
   width: 120px;
   height: 120px;
@@ -276,6 +282,19 @@ header h1 {
   letter-spacing: 0.07em;
   color: var(--background-light);
 
+}
+.logo, header h1 {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: appearScale 0.6s forwards ease-out;
+  animation-delay: 0.3s;
+}
+
+@keyframes appearScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ======== NAVIGATION ======== */
@@ -351,12 +370,14 @@ main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
     background 0.25s,
     color 0.3s;
   position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 .bulle:hover, .bulle:focus {
   background: var(--background-light);
-  color: var(--green-medium);
+ box-shadow: 0 4px 15px rgba(0, 150, 136, 0.3);
+  color: #009688;
   box-shadow: 0 16px 38px var(--accent);
-  transform: scale(1.06) rotate(-2deg);
+  transform: scale(1.1);
   outline: none;
 }
 .bulle i {
@@ -666,7 +687,14 @@ footer .social-links a:focus {
   color: var(--accent);
   outline: none;
 }
+.social-links a i {
+  transition: transform 0.3s ease;
+}
 
+.social-links a:hover i {
+  transform: rotate(15deg) scale(1.2);
+  color: #009688;
+}
 a:focus, button:focus, input:focus, textarea:focus {
   outline: 3px solid var(--focus-outline);
   outline-offset: 2px;
