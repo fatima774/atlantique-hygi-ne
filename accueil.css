@@ -11,6 +11,23 @@
   --background-overlay: rgba(255,255,255,0.9);
   --focus-outline: #3ecf8e;
 }
+.intro-text h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3em;              /* très grand titre */
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.intro-text h2 .light {
+  font-weight: 400;            /* texte normal */
+  color: #1a1a40;
+}
+
+.intro-text h2 .bold {
+  font-weight: 800;            /* texte épais comme dans l'image */
+  color: #1a1a40;
+}
+
 .intro-container {
   display: flex;
   align-items: center;
