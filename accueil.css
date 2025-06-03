@@ -10,6 +10,11 @@
   --background-light: #f7fbf8;
   --background-overlay: rgba(255,255,255,0.9);
   --focus-outline: #3ecf8e;
+  --border-radius: 12px;
+  --box-shadow-default: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --box-shadow-hover: 0 8px 20px rgba(0, 150, 136, 0.3);
+  --transition-time: 0.3s;
+
 }
 
 .btn-devis {
@@ -35,9 +40,9 @@
   max-width: 450px;
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.5s ease;
+ border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-default);
+  transition: transform var(--transition-time) ease;
 }
 .intro-image img:hover {
   transform: scale(1.05);
@@ -165,7 +170,7 @@
   transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   cursor: pointer;
-  will-change: transform, box-shadow;
+  will-change: transform, opacity;
   text-align: left;
   margin: 0 auto;
   max-width: 350px;
@@ -730,7 +735,10 @@ a:focus, button:focus, input:focus, textarea:focus {
   outline: 3px solid var(--focus-outline);
   outline-offset: 2px;
 }
-
+button:focus, a:focus {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 3px;
+}
 @media (max-width: 480px) {
   nav ul { flex-direction: column; gap: 18px;}
   main { padding: 24px 18px;}
