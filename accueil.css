@@ -17,16 +17,16 @@
 
 }
 
+
+/*le bouton devis gratuit - page d'accueil*/
 .btn-devis {
-  transition: box-shadow 0.4s ease;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
-
-.btn-devis:hover {
-  box-shadow: 0 0 12px #009688;
-  transform: translateY(-2px);
-}
-
-
 /* photo+texte:accueil */
 .intro-container {
   display: flex;
@@ -374,84 +374,42 @@ main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
 
 /* ======== BUBBLE SYSTEM (for about, eco, team) ======== */
 
-/* --- Universal bubble --- */
-.bulle {
-  background: #2ec556b4;
-  color: rgb(255, 255, 255);
-  border-radius: 40px;
-  box-shadow: 0 10px 30px var(--shadow-color);
-  padding: 32px 28px;
-  margin: 0;
-  min-width: 220px;
-  max-width: 420px;
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 700;
-  font-size: 1.11rem;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-  transition: 
-    box-shadow 0.25s,
-    transform 0.22s,
-    background 0.25s,
-    color 0.3s;
-  position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-}
-.bulle:hover, .bulle:focus {
-  background: var(--background-light);
- box-shadow: 0 4px 15px rgba(0, 150, 136, 0.3);
-  color: #009688;
-  box-shadow: 0 16px 38px var(--accent);
-  transform: scale(1.1);
-  outline: none;
-}
-.bulle i {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: var(--green-medium);
-  transition: color 0.3s;
-}
-.bulle:hover i, .bulle:focus i { color: rgba(38, 139, 45, 0.71); }
-
-/* --- Bubble grids for about and eco --- */
-.about-bulles, .eco-bulles {
+/* ---les bulles-accueil --- */
+.eco-bulles {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 36px;
-  padding: 48px 0 60px 0;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f4f4f4;
 }
-@media (max-width: 900px) {
-  .about-bulles, .eco-bulles {
-    gap: 20px;
-    padding: 20px 0 30px 0;
-  }
-  .bulle {
-    min-width: 180px;
-    max-width: 100%;
-    padding: 20px 10px;
-  }
+
+.bulle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #e0f7ec;
+  color: #007B55;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
-@media (max-width: 600px) {
-  .about-bulles, .eco-bulles {
-    flex-direction: column;
-    gap: 14px;
-    padding: 12px 0 24px 0;
-  }
-  .bulle {
-    min-width: 120px;
-    max-width: 100%;
-    font-size: 1rem;
-    padding: 16px 6px;
-  }
-  .bulle i { font-size: 1.6rem; }
+
+.bulle:hover {
+  transform: scale(1.1);
+  background-color: #d1f0e3;
 }
+
+.bulle i {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
 
 /* --- About bulles specifics --- */
 .about-bulles .bulle h2 {
