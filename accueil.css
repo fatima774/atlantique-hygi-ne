@@ -1,6 +1,5 @@
-/* ===== Variables de couleurs ===== */
 :root {
-  --green-dark: #1b3a2d;       /* Profond */
+  --green-dark: #479172;       /* Profond */
   --green-medium: #27ae60;     /* Vert moderne */
   --green-light: #a8d5ba;      /* Vert pastel */
   --accent: #3ecf8e;           /* Accent vif */
@@ -39,7 +38,8 @@
 }
 
 .service {
-  background: #fff;
+  background: #2ec556b4;
+  color: white;
   padding: 32px 26px;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -64,13 +64,13 @@
 .service i {
   font-size: 2.8rem;
   margin-bottom: 16px;
-  color: var(--green-light);
+  color: var(--background-light);
   transition: color 0.3s;
 }
 
 .service:hover i,
 .service:focus-within i {
-  color: var(--accent);
+  color: var(--background-light);
 }
 
 .service h3 {
@@ -118,8 +118,9 @@ body {
 
 /* ======== HEADER ======== */
 header {
+
   padding: 10px 20px;
-  background: var(--background-overlay);
+  background: var(--green-dark);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   border-bottom: 3px solid var(--green-light);
   backdrop-filter: saturate(180%) blur(10px);
@@ -161,8 +162,8 @@ header h1 {
   margin: 0;
   font-weight: 900;
   letter-spacing: 0.07em;
-  color: var(--green-dark);
-  text-shadow: 2px 3px 15px var(--green-light);
+  color: var(--background-light);
+
 }
 
 /* ======== NAVIGATION ======== */
@@ -208,18 +209,15 @@ main {
   background: #fffefc;
   border-radius: 18px;
   box-shadow: 0 14px 40px var(--shadow-color);
-  text-align: center;
-  flex-grow: 1;
-  transition: box-shadow 0.35s;
-}
+  text-align: center;}
 main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
 
 /* ======== BUBBLE SYSTEM (for about, eco, team) ======== */
 
 /* --- Universal bubble --- */
 .bulle {
-  background: #fff;
-  color: var(--green-dark);
+  background: #2ec556b4;
+  color: rgb(255, 255, 255);
   border-radius: 40px;
   box-shadow: 0 10px 30px var(--shadow-color);
   padding: 32px 28px;
@@ -255,7 +253,7 @@ main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
   color: var(--green-medium);
   transition: color 0.3s;
 }
-.bulle:hover i, .bulle:focus i { color: white; }
+.bulle:hover i, .bulle:focus i { color: rgba(38, 139, 45, 0.71); }
 
 /* --- Bubble grids for about and eco --- */
 .about-bulles, .eco-bulles {
@@ -546,7 +544,7 @@ footer {
   border-top: 3px solid var(--accent);
   transition: background-color 0.35s;
 }
-footer:hover { background-color: var(--green-medium);}
+
 footer .social-links a {
   color: var(--green-medium);
   transition: color 0.3s;
@@ -557,17 +555,16 @@ footer .social-links a:focus {
   outline: none;
 }
 
-/* ======== UTILS & ACCESSIBILITÉ ======== */
 a:focus, button:focus, input:focus, textarea:focus {
   outline: 3px solid var(--focus-outline);
   outline-offset: 2px;
 }
 
-/* ======== RESPONSIVE NAV & MAIN ======== */
 @media (max-width: 480px) {
   nav ul { flex-direction: column; gap: 18px;}
   main { padding: 24px 18px;}
   .services-grid, .galerie-container { grid-template-columns: 1fr;}
+  
 }
 
-/* ======== FIN DU CSS CLEAN ======== */
+
