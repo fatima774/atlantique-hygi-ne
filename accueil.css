@@ -15,32 +15,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
-  gap: 40px;
+  padding: 80px;
+  gap: 60px;
   background-color: #e8f8fc; /* optionnel, pour ressembler à ta capture */
 }
 
 .intro-image img {
-  width: 100%;
-  max-width: 500px;
+  width: 600%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
   object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .intro-text {
-  max-width: 600px;
+  max-width: 700px;
   font-family: 'Poppins', sans-serif;
 }
 
 .intro-text h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   color: #1a1a40;
+  margin-bottom: 20px;
 }
 
 .intro-text p {
-  font-size: 1.1em;
-  line-height: 1.6;
+  font-size: 1.3em;
+  line-height: 1.8;
 }
 
 /* ======== SERVICES SECTION ======== */
