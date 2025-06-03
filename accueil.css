@@ -350,15 +350,21 @@ main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 130px;
+  padding:20px;
   height: 130px;
   border-radius: 50%;
-  background-color: #e0f7ec;
-  color: #007B55;
+  background-image:url('images/img2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  color:white;
   font-size: 14px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  margin:10px;
+  width:150px;
+  position: relative;
+  overflow:hidden;
 }
 
 .bulle:hover {
@@ -371,7 +377,19 @@ main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
   margin-bottom: 10px;
 }
 
+.bulle::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* noir semi-transparent */
+  border-radius: 15px;
+  z-index: 0;
+}
 
+.bulle > * {
+  position: relative;
+  z-index: 1;
+}
 /* --- About bulles specifics --- */
 .about-bulles .bulle h2 {
   color: var(--green-dark);
