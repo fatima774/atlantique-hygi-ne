@@ -337,13 +337,17 @@ main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
 
 /* ---les bulles-accueil --- */
 .eco-bulles {
-  
+ width: 300px;
+  height: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 30px;
   background-image:url('images/img2.png');
+    background-position: center center; /* centre l’image */
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .bulle {
