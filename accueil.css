@@ -71,17 +71,22 @@
 }
 
     /* Le bouton menu */
-    .menu-button {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      background-color: var(--green-dark);
-      color: white;
-      border: none;
-      padding: 25px;
-      cursor: pointer;
-      z-index: 1001;
-    }
+   .menu-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(145deg, #aee1f9, #d0f0ff);
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+  color: #007bff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  z-index: 999;
+}
 
     /* Le menu latéral */
     .side-menu {
@@ -95,20 +100,22 @@
       transition: 0.3s;
       padding-top: 60px;
       z-index: 1000;
+      box-shadow: 4px 0 12px rgba(0,0,0,0.3);
     }
 
     .side-menu a {
       padding: 10px 20px;
       text-decoration: none;
       font-size: 20px;
-      color: black;
+      color: white;
       display: block;
       transition: 0.3s;
     }
 
-    .side-menu a:hover {
-      background-color: #575757;
-    }
+ .side-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
 
     .close-btn {
       position: absolute;
