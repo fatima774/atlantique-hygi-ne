@@ -137,98 +137,53 @@
     }
 /* ======== SERVICES accueil======== */
 .services {
-  padding: 50px 20px;
+  padding: 60px 20px;
+  background-color: #f8f8f8;
   text-align: center;
-  background: linear-gradient(120deg, #f8fff8, #e7f5ee);
-  border-radius: 18px;
-  margin-top: 30px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
 }
+
 .services h2 {
-  font-size: 2.5rem;
-  color: #17442d;
+  font-size: 2rem;
+  color: #007B55;
   margin-bottom: 30px;
-  font-weight: 800;
-  text-shadow: 1px 1px 4px #b8e8c8;
-  letter-spacing: 0.02em;
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
-  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service {
-  background: #2ec556b4;
-  color: white;
-  padding: 32px 26px;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  cursor: pointer;
-  will-change: transform, opacity;
-  text-align: left;
-  margin: 0 auto;
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  width: 280px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .service:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(0, 150, 136, 0.3);
-  background-color: #f0fdfd; /* léger fond */
 }
 
-.service:focus-within {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
-  outline: none;
-}
-.service.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 .service i {
-  font-size: 2.8rem;
-  margin-bottom: 16px;
-  color:  #009688;
-  transition: color 0.3s ease;
-  display: inline-block;
-}
-
-.service:hover i,
-.service:focus-within i {
-  color:  #00675b;
+  font-size: 2.5rem;
+  color: #007B55;
+  margin-bottom: 15px;
 }
 
 .service h3 {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-  font-weight: 800;
-  color: var(--text-dark);
+  font-size: 1.25rem;
+  margin-bottom: 10px;
 }
 
 .service p {
-  font-size: 1.06rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-/*titres services*/
-.services h2 {
-  opacity: 0;
-  transform: translateX(-30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.services h2.visible {
-  opacity: 1;
-  transform: translateX(0);
+  font-size: 0.95rem;
+  color: #444;
 }
 
 
