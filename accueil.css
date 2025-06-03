@@ -11,6 +11,38 @@
   --background-overlay: rgba(255,255,255,0.9);
   --focus-outline: #3ecf8e;
 }
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 40px;
+  background-color: #e8f8fc; /* optionnel, pour ressembler à ta capture */
+}
+
+.intro-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.intro-text {
+  max-width: 600px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.intro-text h2 {
+  font-size: 2em;
+  color: #1a1a40;
+}
+
+.intro-text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
 /* ======== SERVICES SECTION ======== */
 .services {
   padding: 50px 20px;
