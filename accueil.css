@@ -93,111 +93,116 @@ header h1 {
   justify-content: center;
   margin-top: 15px;
 }
-  .menu-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1100;
-    background-color: var(--green-dark);
-    color: black;
-    border: none;
-    padding: 10px 14px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-  }
-  .menu-toggle:hover {
-    background-color: var(--green-light);
+ 
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
   }
 
-  /* Menu latéral */
-  .side-menu {
-    height: 100vh;
-    width: 0;
+  /* Conteneur des boutons fixes */
+  .side-buttons {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+  }
+
+  .side-buttons button {
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 30px 0 0 30px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: width 0.3s ease;
+    width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .side-buttons button i {
+    font-size: 20px;
+  }
+
+  /* Texte caché au départ */
+  .side-buttons button span {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Au hover, on agrandit le bouton et montre le texte */
+  .side-buttons button:hover,
+  .side-buttons button:focus {
+    width: 180px;
+    outline: none;
+  }
+  .side-buttons button:hover span,
+  .side-buttons button:focus span {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Bouton menu */
+  .side-buttons button.menu-btn {
+    background-color: var(--green-dark);
+    color: white;
+    font-size: 22px;
+    border-radius: 30px 0 0 30px;
+    justify-content: center;
+  }
+
+  /* Le menu latéral */
+  #sideMenu {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--green-dark);
+    height: 100%;
+    width: 0;
     overflow-x: hidden;
-    transition: 0.3s;
+    background-color: var(--green-dark);
+    color: white;
+    transition: width 0.3s ease;
     padding-top: 60px;
-    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
-    z-index: 1050;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    z-index: 999;
   }
-  .side-menu.open {
+
+  #sideMenu.open {
     width: 250px;
   }
-  .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 32px;
-    color: black;
-    cursor: pointer;
-  }
-  .side-nav a {
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
+
+  #sideMenu a {
     display: block;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  .side-nav a:hover,
-  .side-nav a:focus {
-    background-color: var(--green-light);
-    color: black;
-    outline: none;
-  }
-
-  /* Boutons en bas */
-  .side-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 20px 30px 40px;
-  }
-  .side-btn {
-    background-color: var(--green-light);
-    color: black;
+    padding: 15px 30px;
+    color: white;
     text-decoration: none;
-    padding: 10px 14px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
     font-weight: 600;
-    font-size: 16px;
-    position: relative;
-    overflow: hidden;
-  }
-  .side-btn i {
-    font-size: 22px;
-    color: black;
-    flex-shrink: 0;
-  }
-  .side-btn:hover,
-  .side-btn:focus {
-    background-color: var(--green-accent, #3dbb3d);
-    color: black;
-    outline: none;
-  }
-  .side-btn:hover .btn-text,
-  .side-btn:focus .btn-text {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  .btn-text {
-    opacity: 0;
-    transform: translateX(-15px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
-    white-space: nowrap;
+    border-bottom: 1px solid var(--green-light);
   }
 
+  #sideMenu a:hover,
+  #sideMenu a:focus {
+    background-color: var(--green-light);
+    outline: none;
+  }
+
+  #sideMenu .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 36px;
+    cursor: pointer;
+    color: white;
+  }
 
 /*le bouton devis gratuit - page d'accueil*/
 .cta {
