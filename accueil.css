@@ -220,7 +220,7 @@ body {
 /* ======== HEADER ======== */
 header {
 
-  padding: 10px 20px;
+  padding: 10px 10px;
   background: var(--green-dark);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   border-bottom: 3px solid var(--green-light);
@@ -229,10 +229,10 @@ header {
 }
 /* logo*/
 .logo {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   padding: 0; /* Enlève le padding pour que l'image prenne tout l'espace */
-  margin: 0 auto 16px auto;
+  margin: 0 auto 10px auto;
   box-shadow: 0 0 18px var(--shadow-color);
   transition: box-shadow 0.35s;
   cursor: pointer;
@@ -250,7 +250,7 @@ header .header-container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 .logo-img {
   width: 100%;
@@ -266,7 +266,7 @@ header .header-container {
 }
 .logo:hover, .logo:focus { box-shadow: 0 0 28px var(--accent); outline: none; }
 header h1 {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   margin: 0;
   font-weight: 900;
   letter-spacing: 0.07em;
@@ -291,7 +291,7 @@ header h1 {
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 44px;
+  gap: 8px;
   padding: 0;
   margin: 36px 0 50px;
   list-style: none;
