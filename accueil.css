@@ -330,64 +330,88 @@ header h1 {
   justify-content: center;
   gap: 30px;
   padding: 40px 20px;
-  background-color: #f1f7f4;
+  background-color: #f8f9fa;
 }
 
 .service {
   position: relative;
-  width: 300px;
-  height: 150px;
+  width: 320px;
+  height: 180px;
   padding: 20px;
-  background: linear-gradient(135deg, #e0f7ec, #c8ede1);
-  border-radius: 25px;
-  box-shadow: 0 8px 16px rgba(0, 123, 85, 0.15);
+  border-radius: 24px;
+  color: white;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: flex-end;
+  text-align: left;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.service::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.45);
+  z-index: 0;
+  transition: filter 0.3s ease;
+}
+
 .service:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 20px rgba(0, 123, 85, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.service:hover::before {
+  filter: brightness(0.6);
+}
+
+.service i,
+.service h3,
+.service p {
+  position: relative;
+  z-index: 1;
 }
 
 .service i {
-  font-size: 32px;
-  color: #007B55;
-  margin-bottom: 10px;
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #ffffff;
 }
 
 .service h3 {
-  font-size: 18px;
-  color: #004d3c;
-  margin-bottom: 8px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0;
 }
 
 .service p {
-  font-size: 14.5px;
-  color: #333;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.service:nth-child(1)::before {
+  background-image: url('images/IMG_3159.jpg');
+}
+.service:nth-child(2)::before {
+  background-image: url('images/IMG_3187.jpg');
+}
+.service:nth-child(3)::before {
+  background-image: url('images/IMG_3200.jpg');
+}
+.service:nth-child(4)::before {
+  background-image: url('images/DSC_0944.jpg');
+}
+.service:nth-child(5)::before {
+  background-image: url('images/AH (11).jpg');
+}
+.service:nth-child(6)::before {
+  background-image: url('images/DSC_0937.jpg');
 }
 
-/* Responsive pour mobile */
-@media (max-width: 600px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  .service {
-    max-width: 100%;
-    padding: 20px 12px;
-  }
-}
-/* ======== RESET & GLOBAL ======== */
-*, *::before, *::after {
-  box-sizing: border-box;
-  transition: background-color 0.3s, color 0.3s;
-}
+
 body {
   margin: 0;
   padding: 0;
