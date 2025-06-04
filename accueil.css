@@ -93,70 +93,110 @@ header h1 {
   justify-content: center;
   margin-top: 15px;
 }
-/* Container collé au bord en haut */
-.side-buttons {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background: transparent; /* ou un peu opaque si tu veux */
-  padding: 10px 5px;
-  z-index: 10000;
-}
+  .menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+    background-color: var(--green-dark);
+    color: black;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  .menu-toggle:hover {
+    background-color: var(--green-light);
+  }
 
-.side-btn {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  background-color: var(--green-light);
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease;
-}
+  /* Menu latéral */
+  .side-menu {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--green-dark);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .side-menu.open {
+    width: 250px;
+  }
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    color: black;
+    cursor: pointer;
+  }
+  .side-nav a {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .side-nav a:hover,
+  .side-nav a:focus {
+    background-color: var(--green-light);
+    color: black;
+    outline: none;
+  }
 
-.side-btn i {
-  font-size: 24px;
-  pointer-events: none;
-}
-
-.side-btn::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  left: 60px;
-  top: 50%;
-  transform: translateY(-50%) translateX(-10px);
-  background-color: var(--green-dark);
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  opacity: 0;
-  white-space: nowrap;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transform-origin: left center;
-}
-
-.side-btn:hover::after,
-.side-btn:focus::after {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0);
-}
-
-.side-btn:hover,
-.side-btn:focus {
-  background-color: var(--green-dark);
-  outline: none;
-}
+  /* Boutons en bas */
+  .side-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 30px 40px;
+  }
+  .side-btn {
+    background-color: var(--green-light);
+    color: black;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .side-btn i {
+    font-size: 22px;
+    color: black;
+    flex-shrink: 0;
+  }
+  .side-btn:hover,
+  .side-btn:focus {
+    background-color: var(--green-accent, #3dbb3d);
+    color: black;
+    outline: none;
+  }
+  .side-btn:hover .btn-text,
+  .side-btn:focus .btn-text {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .btn-text {
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    white-space: nowrap;
+  }
 
 
 /*le bouton devis gratuit - page d'accueil*/
