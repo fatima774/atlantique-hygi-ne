@@ -462,31 +462,39 @@ main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
   padding: 30px;
   background-color:#f4f4f4;
 }
-
 .bulle {
+  position: relative;        /* important pour le ::before */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 130px;
   height: 130px;
-  border-radius: 50%;
-  background-color: #e0f7ec;
-  color: #007B55;
+  border-radius: 50%;        /* rond */
+  color: #fff;               /* texte blanc pour contraster */
   font-size: 14px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;          /* pour cacher le ::before en dehors */
+  cursor: default;
   transition: transform 0.3s ease;
+  background-color: #000;    /* fallback */
 }
 
 .bulle:hover {
-  transform: scale(1.1);
-  background-color: #d1f0e3;
+transform: scale(1.1);
 }
 
-.bulle i {
-  font-size: 28px;
-  margin-bottom: 10px;
+.bulle i ,
+.bulle::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6); /* assombrit l'image pour le texte */
+  z-index: 0;
+  transition: filter 0.3s ease;
 }
 
 
@@ -511,6 +519,38 @@ main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
   text-align: left;
   width: 100%;
 }
+.bulle i,
+.bulle span {
+  position: relative;
+  z-index: 1;
+  color: #fff;  /* texte blanc */
+}
+
+/* Images spécifiques */
+.bulle:nth-child(1)::before {
+  background-image: url('images/IMG_3159.jpg');
+}
+.bulle:nth-child(2)::before {
+  background-image: url('images/IMG_3187.jpg');
+}
+.bulle:nth-child(3)::before {
+  background-image: url('images/IMG_3200.jpg');
+}
+.bulle:nth-child(4)::before {
+  background-image: url('images/DSC_0944.jpg');
+}
+.bulle:nth-child(5)::before {
+  background-image: url('images/AH (11).jpg');
+}
+.bulle:nth-child(6)::before {
+  background-image: url('images/DSC_0937.jpg');
+}
+
+/* Optionnel: effet sur le hover */
+.bulle:hover::before {
+  filter: brightness(0.4);
+}
+
 .about-bulles .about-list {
   list-style: disc inside;
   padding-left: 0;
