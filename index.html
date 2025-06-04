@@ -11,11 +11,7 @@
 
   </head>
   <body>
-     <button class="menu-toggle" onclick="openMenu()">☰ Menu</button>
-
-<div id="sideMenu" class="side-menu">
-  <span class="close-btn" onclick="closeMenu()">&times;</span>
-  
+    
   <nav class="side-nav">
     <a href="index.html">Accueil</a>
     <a href="services.html">Services</a>
@@ -23,22 +19,48 @@
     <a href="about.html">À propos</a>
   </nav>
 
-  <div class="side-buttons">
-    <a href="contact.html" class="side-btn" title="Nous contacter">
-      <i class="fas fa-phone"></i>
-      <span class="btn-text">Nous contacter</span>
-    </a>
-    <a href="devis.html" class="side-btn" title="Obtenir un devis">
-      <i class="fas fa-file-alt"></i>
-      <span class="btn-text">Obtenir un devis</span>
-    </a>
-    <a href="realisations.html" class="side-btn" title="Nos réalisations">
-      <i class="fas fa-briefcase"></i>
-      <span class="btn-text">Nos réalisations</span>
-    </a>
-  </div>
+
+</div>
+<!-- Boutons fixes sur la gauche -->
+<div class="side-buttons" aria-label="Boutons latéraux">
+  <button type="button" aria-label="Nous contacter" title="Nous contacter">
+    <i class="fas fa-phone"></i> <span>Nous contacter</span>
+  </button>
+  <button type="button" aria-label="Obtenir un devis" title="Obtenir un devis">
+    <i class="fas fa-file-alt"></i> <span>Obtenir un devis</span>
+  </button>
+  <button type="button" aria-label="Nos réalisations" title="Nos réalisations">
+    <i class="fas fa-briefcase"></i> <span>Nos réalisations</span>
+  </button>
+
+  <!-- Bouton menu -->
+  <button type="button" class="menu-btn" aria-label="Ouvrir le menu" title="Ouvrir le menu" onclick="openMenu()">
+    <i class="fas fa-bars"></i>
+  </button>
 </div>
 
+<!-- Menu latéral -->
+<div id="sideMenu" aria-hidden="true">
+  <span class="close-btn" onclick="closeMenu()" aria-label="Fermer le menu">&times;</span>
+  <a href="index.html">Accueil</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">À propos</a>
+</div>
+
+<script>
+  const sideMenu = document.getElementById("sideMenu");
+
+  function openMenu() {
+    sideMenu.classList.add("open");
+    sideMenu.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeMenu() {
+    sideMenu.classList.remove("open");
+    sideMenu.setAttribute('aria-hidden', 'true');
+  }
+</script>
     <header> 
      
     <div class="header-container">
