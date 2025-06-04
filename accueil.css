@@ -49,6 +49,7 @@ header .header-container {
   align-items: center;
   justify-content: center;
   padding: 10px 0;
+  padding-top: 80px;
 }
 .logo-img {
   width: 100%;
