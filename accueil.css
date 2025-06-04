@@ -126,6 +126,7 @@ header h1 {
     overflow: hidden;
     white-space: nowrap;
     position: relative;
+    text-decoration:none;
   }
 
   .side-buttons button i {
