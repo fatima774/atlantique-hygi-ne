@@ -323,56 +323,55 @@ header h1 {
       cursor: pointer;
     }
 /* ======== SERVICES accueil======== */
-.services {
-  padding: 60px 20px;
-  background-color: #f8f8f8;
-  text-align: center;
-}
-
-.services h2 {
-  font-size: 2rem;
-  color: #007B55;
-  margin-bottom: 30px;
-}
-
+/* === STYLE POUR services.html === */
 .services-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #f1f7f4;
 }
 
 .service {
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 30px 20px;
-  width: 280px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  position: relative;
+  width: 300px;
+  height: 150px;
+  padding: 20px;
+  background: linear-gradient(135deg, #e0f7ec, #c8ede1);
+  border-radius: 25px;
+  box-shadow: 0 8px 16px rgba(0, 123, 85, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service:hover {
-  transform: scale(1.05);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 123, 85, 0.25);
 }
 
 .service i {
-  font-size: 2.5rem;
+  font-size: 32px;
   color: #007B55;
-  margin-bottom: 15px;
-}
-
-.service h3 {
-  font-size: 1.25rem;
   margin-bottom: 10px;
 }
 
-.service p {
-  font-size: 0.95rem;
-  color: #444;
+.service h3 {
+  font-size: 18px;
+  color: #004d3c;
+  margin-bottom: 8px;
+  font-weight: 700;
 }
 
+.service p {
+  font-size: 14.5px;
+  color: #333;
+  line-height: 1.5;
+}
 
 /* Responsive pour mobile */
 @media (max-width: 600px) {
