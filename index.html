@@ -9,16 +9,32 @@
 
   </head>
   <body>
-      <div class="side-buttons">
-  <a href="/nous-contacter" class="side-btn" data-tooltip="Nous contacter">
-    <i class="fas fa-phone"></i>
-  </a>
-  <a href="/devis" class="side-btn" data-tooltip="Obtenir un devis">
-    <i class="fas fa-file-alt"></i>
-  </a>
-  <a href="/realisations" class="side-btn" data-tooltip="Nos réalisations">
-    <i class="fas fa-briefcase"></i>
-  </a>
+     <button class="menu-toggle" onclick="openMenu()">☰ Menu</button>
+
+<div id="sideMenu" class="side-menu">
+  <span class="close-btn" onclick="closeMenu()">&times;</span>
+  
+  <nav class="side-nav">
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">À propos</a>
+  </nav>
+
+  <div class="side-buttons">
+    <a href="contact.html" class="side-btn" title="Nous contacter">
+      <i class="fas fa-phone"></i>
+      <span class="btn-text">Nous contacter</span>
+    </a>
+    <a href="devis.html" class="side-btn" title="Obtenir un devis">
+      <i class="fas fa-file-alt"></i>
+      <span class="btn-text">Obtenir un devis</span>
+    </a>
+    <a href="realisations.html" class="side-btn" title="Nos réalisations">
+      <i class="fas fa-briefcase"></i>
+      <span class="btn-text">Nos réalisations</span>
+    </a>
+  </div>
 </div>
 
     <header> 
@@ -85,23 +101,7 @@
     </div>  
     <button class="menu-button" onclick="openMenu()">Menu</button>
 
-<!-- Menu latéral -->
-<div id="sideMenu" class="side-menu">
-  <span class="close-btn" onclick="closeMenu()">&times;</span>
-  <a href="index.html">Accueil</a>
-  <a href="services.html">Services</a>
-  <a href="contact.html">Contact</a>
-  <a href="about.html">À propos</a>
-</div>
 
-<script>
-  function openMenu() {
-    document.getElementById("sideMenu").style.width = "250px";
-  }
-
-  function closeMenu() {
-    document.getElementById("sideMenu").style.width = "0";
-  }
 </script>
     <div class="footer-links">   
       <a href="mentions.html">Mentions légales</a> |     
