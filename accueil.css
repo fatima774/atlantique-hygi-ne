@@ -941,5 +941,5 @@ button:focus, a:focus {
   nav ul { flex-direction: column; gap: 18px;}
   main { padding: 24px 18px;}
   .services-grid, .galerie-container { grid-template-columns: 1fr;}
-  
+}
 }
