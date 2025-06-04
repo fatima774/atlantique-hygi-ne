@@ -890,6 +890,7 @@ transform: scale(1.1);
   margin-bottom: 25px;
 
 /* ======== FOOTER ======== */
+/* ======== FOOTER ======== */
 footer {
   background: var(--green-dark);
   color: #d7e4db;
@@ -915,7 +916,6 @@ footer .social-links a:focus {
 }
 .social-links a i {
   transition: transform 0.3s ease;
-    font-size: 28px;
 }
 footer a i {
   transition: transform 0.3s ease, color 0.3s ease;
@@ -941,5 +941,5 @@ button:focus, a:focus {
   nav ul { flex-direction: column; gap: 18px;}
   main { padding: 24px 18px;}
   .services-grid, .galerie-container { grid-template-columns: 1fr;}
-}
+  
 }
