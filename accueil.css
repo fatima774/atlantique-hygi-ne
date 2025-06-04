@@ -94,50 +94,46 @@ header h1 {
   margin-top: 15px;
 }
 /* Container collé au bord en haut */
-.top-buttons {
-  position: fixed;       /* Fixé en haut, reste visible */
-  top: 0;
-  left: 0;              /* Collé au bord gauche */
-  height: 60px;
+.side-buttons {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   display: flex;
-  align-items: center;
-  gap: 16px;
-  padding-left: 12px;    /* Petit padding du bord */
-  background: var(--green-dark);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  z-index: 9999;        /* Toujours au-dessus */
-  width: auto;
-  max-width: 250px;      /* largeur max si besoin */
+  flex-direction: column;
+  gap: 20px;
+  background: transparent; /* ou un peu opaque si tu veux */
+  padding: 10px 5px;
+  z-index: 10000;
 }
 
-/* Style des boutons (identique à avant) */
-.btn-header {
+.side-btn {
   position: relative;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   background-color: var(--green-light);
-  border-radius: 50%;
+  border-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: black;
   text-decoration: none;
   cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   transition: background-color 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
-.btn-header i {
-  font-size: 22px;
+.side-btn i {
+  font-size: 24px;
   pointer-events: none;
 }
 
-.btn-header::after {
+.side-btn::after {
   content: attr(data-tooltip);
   position: absolute;
   left: 60px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(-10px);
   background-color: var(--green-dark);
   color: #fff;
   padding: 6px 12px;
@@ -148,19 +144,17 @@ header h1 {
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform-origin: left center;
-  transform: translateY(-50%) translateX(-10px);
 }
 
-.btn-header:hover::after,
-.btn-header:focus::after {
+.side-btn:hover::after,
+.side-btn:focus::after {
   opacity: 1;
   transform: translateY(-50%) translateX(0);
 }
 
-.btn-header:hover,
-.btn-header:focus {
+.side-btn:hover,
+.side-btn:focus {
   background-color: var(--green-dark);
-  color: black;
   outline: none;
 }
 
