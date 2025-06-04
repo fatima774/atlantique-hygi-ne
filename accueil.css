@@ -638,6 +638,7 @@ footer .social-links a:focus {
 }
 .social-links a i {
   transition: transform 0.3s ease;
+    font-size: 28px;
 }
 footer a i {
   transition: transform 0.3s ease, color 0.3s ease;
