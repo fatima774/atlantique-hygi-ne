@@ -31,14 +31,16 @@ width: 80%;
 /* logo*/
 .logo {
   width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border: 3px solid #006699; /* Accent color */
+  height: auto; /* pour garder le ratio de l'image */
+  border: 3px solid #006699; /* ou var(--accent) si défini */
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  background: white;
-  overflow: hidden;
+  background-color: white;
   padding: 4px;
+  border-radius: 12px; /* coins légèrement arrondis */
+  object-fit: cover;
+  transition: box-shadow 0.35s;
 }
+
 
 header .header-container {
   display: flex;
