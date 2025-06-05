@@ -499,7 +499,57 @@ header h1 {
 .service:nth-child(6)::before {
   background-image: url('images/DSC_0937.jpg');
 }
+.moyens-techniques {
+  background-color: #f7fbf8;
+  padding: 50px 20px;
+  text-align: center;
+}
 
+.moyens-techniques h2 {
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+  color: var(--green-dark);
+}
+
+.equipement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.equipement {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.equipement:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.equipement i {
+  font-size: 2.5rem;
+  color: var(--green-medium);
+  margin-bottom: 14px;
+}
+
+.equipement h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.equipement p {
+  font-size: 0.98rem;
+  color: #444;
+  line-height: 1.5;
+}
+/*--fin page services--*/
 .notre-entreprise {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
