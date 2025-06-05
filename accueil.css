@@ -257,7 +257,7 @@ header h1 {
   background-image: url("images/qualite.jpg"); /* Ton image ici */
   background-size: cover;
   background-position: center;
-  filter: blur(1.5px) brightness(2); /* Flou + assombrissement léger */
+  filter: blur(1.5px) ; /* Flou + assombrissement léger */
   z-index: -1;
   opacity: 1;
 }
@@ -281,7 +281,7 @@ header h1 {
   background-image: url("images/securite.jpg"); /* change par le chemin de ta photo */
   background-size: cover;
   background-position: center;
-  filter: blur(3px) brightness(0.7); /* flou léger + assombrir */
+  filter: blur(3px) ; /* flou léger + assombrir */
   z-index: -1;
   opacity: 1;
 }
@@ -293,7 +293,7 @@ header h1 {
   background-image: url("images/reactivite.jpg"); /* mets ici ton image */
   background-size: cover;
   background-position: center;
-  filter: blur(3px) brightness(0.7); /* ajuste flou et luminosité */
+  filter: blur(3px) ; /* ajuste flou et luminosité */
   z-index: -1;
   opacity: 1;
 }
