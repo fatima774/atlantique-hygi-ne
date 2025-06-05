@@ -212,6 +212,63 @@ header h1 {
     color: white;
   }
 
+.engagements {
+  background: #f7f9fc;
+  padding: 60px 20px;
+  text-align: center;
+}
+.engagements h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1d1d1d;
+}
+.engagement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+.engagement-item {
+  background: white;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  text-align: left;
+}
+.engagement-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #006699;
+}
+.engagement-item p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.organisation {
+  background: #eef4f7;
+  padding: 50px 20px;
+  margin-top: 40px;
+}
+.organisation h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1d1d1d;
+}
+.organisation ul {
+  max-width: 800px;
+  margin: auto;
+  padding-left: 20px;
+  list-style-type: "✅ ";
+}
+.organisation li {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
 /*le bouton devis gratuit - page d'accueil*/
 .cta {
   background-color:  var(--green-medium);
