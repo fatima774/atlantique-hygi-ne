@@ -1102,7 +1102,7 @@ footer {
 }
 
 footer .social-links a {
-  color: var(--green-medium);
+  color: black;
   transition: color 0.3s;
 }
 
