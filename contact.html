@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact | Atlantique Hygiène</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="accueil.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Hygiène Propreté Services</title>
+
+  <!-- CSS Leaflet -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+  <!-- Ton fichier CSS -->
+  <link rel="stylesheet" href="accueil.css" />
 </head>
 <body>
   <header>
     <div class="header-container">
-      <img src="images/logo.png" alt="Logo Atlantique Hygiène" class="logo">
+      <img src="images/logo.png" alt="Logo Atlantique Hygiène" class="logo" />
       <h1>Atlantique Hygiène</h1>
-    </div>
+       </div>
     <nav>
       <ul>
-        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html" >Accueil</a></li>
         <li><a href="services.html">Nos Prestations</a></li>
-        <li><a href="realisations.html">Réalisations</a></li>
+         <li><a href="realisations.html">Réalisations</a></li>
         <li><a href="devis.html">Demande de Devis</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html"class="active">Contact</a></li>
         <li><a href="about.html">À propos</a></li>
       </ul>
     </nav>
@@ -31,19 +39,19 @@
       <h2>Contactez-nous</h2>
       <form action="https://formspree.io/f/xnndyprl" method="POST">
         <label>
-          Votre email :<br>
-          <input type="email" name="email" required>
+          Ton email :<br />
+          <input type="email" name="email" required />
         </label>
-        <br><br>
+        <br /><br />
         <label>
-          Votre message :<br>
+          Ton message :<br />
           <textarea name="message" rows="5" required></textarea>
         </label>
-        <br><br>
+        <br /><br />
         <button type="submit">Envoyer</button>
       </form>
 
-      <p>📞 Téléphone : 01 47 85 60 10<br>📍 Adresse : 92700 Colombes</p>
+      <p>📞 Téléphone : 01 47 85 60 10<br />📍 Adresse : 92700 Colombes</p>
 
       <section class="map-section">
         <h2>Où nous trouver</h2>
@@ -53,28 +61,47 @@
   </main>
 
   <footer>
-    <p>Suivez-nous sur les réseaux sociaux :</p>
-    <div class="social-links">
-      <a href="https://www.instagram.com/nom_de_lentreprise/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/company/atlantiquehygi%C3%A8ne" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.facebook.com/nom_de_lentreprise/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.youtube.com/channel/UCUjsQBJxvjZMtEFt5k6ZXGg" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.tiktok.com/@atlantique_hygiene" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-    </div>
-    <p>&copy; 2025 Atlantique Hygiène - Tous droits réservés</p>
+        <p>Suivez-nous sur les réseaux sociaux :</p>
+  <a href="https://www.instagram.com/nom_de_lentreprise/" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">
+    <i class="fab fa-instagram fa-2x"></i>
+  </a>
+  <a href="https://www.linkedin.com/company/atlantiquehygi%C3%A8ne"
+ target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">
+    <i class="fab fa-linkedin fa-2x"></i>
+  </a>
+  <a href="https://www.facebook.com/nom_de_lentreprise/" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">
+    <i class="fab fa-facebook fa-2x"></i>
+  </a>
+  <a href="https://www.youtube.com/channel/UCUjsQBJxvjZMtEFt5k6ZXGg" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">
+    <i class="fab fa-youtube fa-2x"></i>
+  </a>
+  <a href="https://www.tiktok.com/@atlantique_hygiene?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;">
+    <i class="fab fa-tiktok fa-2x"></i>
+  </a>
+   
+    <p>&copy; 2025 Hygiène Propreté Services</p>
   </footer>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Leaflet JS -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+
+></script>
+
   <script>
+  
     const lat = 48.9119;
     const lng = 2.2390;
 
     const map = L.map("map").setView([lat, lng], 15);
 
+    // Ajouter la couche OpenStreetMap
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
 
+    // Ajouter un marqueur
     L.marker([lat, lng])
       .addTo(map)
       .bindPopup("Atlantique Hygiène - 7 AVENUE AUDRA 92700 COLOMBES")
