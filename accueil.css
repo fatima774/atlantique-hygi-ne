@@ -270,30 +270,62 @@ header h1 {
   background-image: url("images/reactivite.jpg");
 }
 
-
+/*--page accueil--*/
 .organisation {
-  background: #eef4f7;
+  background-color: #f7fbf8;
   padding: 50px 20px;
-  margin-top: 40px;
-}
-.organisation h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px var(--shadow-color);
   text-align: center;
-  color: #1d1d1d;
-}
-.organisation ul {
-  max-width: 800px;
-  margin: auto;
-  padding-left: 20px;
-  list-style-type: "✅ ";
-}
-.organisation li {
-  font-size: 1rem;
-  margin-bottom: 12px;
-  color: #333;
+  margin: 60px auto;
+  max-width: 1000px;
 }
 
+.organisation h2 {
+  font-size: 2.1rem;
+  color: var(--green-dark);
+  margin-bottom: 38px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.org-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.org-card {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  text-align: left;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.org-card:hover {
+  transform: translateY(-6px);
+}
+
+.org-card i {
+  font-size: 28px;
+  color: var(--green-medium);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.org-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.org-card strong {
+  color: var(--green-dark);
+}
+/*--fin page accueil--*/
 /*le bouton devis gratuit - page d'accueil*/
 .cta {
   background-color:  var(--green-medium);
