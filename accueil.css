@@ -903,6 +903,30 @@ transform: scale(1.1);
 @media (max-width: 600px) {
   .galerie-container { grid-template-columns: 1fr;}
 }
+/*---page devis---*/
+.confiance {
+  background: #f5f5f5;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+.atouts {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.atouts li {
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+}
+.atouts i {
+  color: #006699;
+  margin-right: 8px;
+}
 
 /* ======== CONTACT ======== */
 .contact {
