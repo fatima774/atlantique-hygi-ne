@@ -62,5 +62,40 @@
     </div>
     <p>&copy; 2025 Atlantique Hygiène - Tous droits réservés</p>
   </footer>
+   <div class="side-buttons" aria-label="Boutons latéraux">
+      <button type="button" aria-label="Nous contacter" title="Nous contacter" onclick="window.location.href='contact.html'">
+        <i class="fas fa-phone"></i> <span>Nous contacter</span>
+      </button>
+      <button type="button" aria-label="Obtenir un devis" title="Obtenir un devis" onclick="window.location.href='devis.html'">
+        <i class="fas fa-file-alt"></i> <span>Obtenir un devis</span>
+      </button>
+      <button type="button" aria-label="Nos réalisations" title="Nos réalisations" onclick="window.location.href='realisations.html'">
+        <i class="fas fa-briefcase"></i> <span>Nos réalisations</span>
+      </button>
+      <button type="button" class="menu-btn" aria-label="Ouvrir le menu" title="Ouvrir le menu" onclick="openMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Menu latéral -->
+    <div id="sideMenu" aria-hidden="true">
+      <span class="close-btn" onclick="closeMenu()" aria-label="Fermer le menu">&times;</span>
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">À propos</a>
+    </div>
+
+    <script>
+      const sideMenu = document.getElementById("sideMenu");
+      function openMenu() {
+        sideMenu.classList.add("open");
+        sideMenu.setAttribute('aria-hidden', 'false');
+      }
+      function closeMenu() {
+        sideMenu.classList.remove("open");
+        sideMenu.setAttribute('aria-hidden', 'true');
+      }
+    </script>
 </body>
 </html>
