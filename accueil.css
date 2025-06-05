@@ -992,6 +992,7 @@ footer a:hover i {
 .social-links a:hover i {
   transform: rotate(15deg) scale(1.2);
   color: #009688;
+  font-siza:28px;
 }
 
 .footer-links {
