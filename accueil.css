@@ -244,11 +244,11 @@ header h1 {
 .engagement-item p {
   position: relative;
   z-index: 1;
-  color: black; 
+  color: white; 
   border-radius: 6px;/* Forcer le noir si besoin */
   font-weight: 500;
   background-color: rgba(255, 255, 255, 0.7); 
-  padding: 3px 6px; 
+  padding: 2px 3px; 
   border-radius: 5px;
 }
 .engagement-qualite::before {
