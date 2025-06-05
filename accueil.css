@@ -20,7 +20,7 @@
 header {
 
   padding: 10px 10px;
-  background: var(--green-dark);
+  background: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   border-bottom: 3px solid var(--green-light);
   backdrop-filter: saturate(180%) blur(10px);
