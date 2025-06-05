@@ -30,22 +30,16 @@ width: 80%;
 }
 /* logo*/
 .logo {
-  width: 80px;
-  height: 80px;
-  padding: 0; /* Enlève le padding pour que l'image prenne tout l'espace */
-  margin: 0 auto 10px auto;
-  box-shadow: 0 0 18px var(--shadow-color);
-  transition: box-shadow 0.35s;
-  cursor: pointer;
-  animation: fadeIn 0.8s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none; 
-  display: block;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-   object-fit: cover; 
+  border: 3px solid var(--accent); /* Accent color */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  background: white;
+  overflow: hidden;
+  padding: 4px;
 }
+
 header .header-container {
   display: flex;
   flex-direction: column;
