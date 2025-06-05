@@ -246,6 +246,7 @@ header h1 {
   z-index: 1;
   color: black; 
   border-radius: 6px;/* Forcer le noir si besoin */
+  font-weight: 500; 
 }
 .engagement-qualite::before {
   content: "";
@@ -259,6 +260,19 @@ header h1 {
   z-index: -1;
   opacity: 1;
 }
+.engagement-ecologie::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("images/ecologie.jpg"); /* <-- Remplace par ton image */
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) brightness(0.8); /* Flou léger + assombrissement */
+  z-index: -1;
+  opacity: 1;
+}
+
 .organisation {
   background: #eef4f7;
   padding: 50px 20px;
