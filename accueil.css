@@ -257,7 +257,7 @@ header h1 {
   background-image: url("images/qualite.jpg"); /* Ton image ici */
   background-size: cover;
   background-position: center;
-  filter: blur(1.5px) brightness(0.8); /* Flou + assombrissement léger */
+  filter: blur(1.5px) brightness(2); /* Flou + assombrissement léger */
   z-index: -1;
   opacity: 1;
 }
@@ -269,7 +269,7 @@ header h1 {
   background-image: url("images/ecologie.jpg"); /* <-- Remplace par ton image */
   background-size: cover;
   background-position: center;
-  filter: blur(3px) brightness(0.8); /* Flou léger + assombrissement */
+  filter: blur(3px) ; /* Flou léger + assombrissement */
   z-index: -1;
   opacity: 1;
 }
