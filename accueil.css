@@ -1,4 +1,4 @@
-Vous avez dit :
+
 :root {
   --green-dark: #479172;       /* Profond */
   --green-medium: #27ae60;     /* Vert moderne */
@@ -152,6 +152,10 @@ header h1 {
     opacity: 1;
     pointer-events: auto;
   }
+.menu-btn,
+.menu-btn i {
+  color: black !important;
+}
 
   /* Bouton menu */
   .side-buttons button.menu-btn {
