@@ -483,7 +483,7 @@ body {
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 12px; /* un peu plus d'espace */
+  gap: 12px;
   padding: 0;
   margin: 36px 0 50px;
   list-style: none;
@@ -491,24 +491,20 @@ nav ul {
 }
 
 nav ul li a {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 24px;     /* cercle carré */
-  height: 24px;    /* cercle carré */
-  border-radius: 50%; /* cercle parfait */
-  background: transparent; /* pas de background pour commencer */
-  color: black;      /* texte noir */
+  padding: 10px 20px; /* Ajuste l'espace autour du texte */
+  border: 2px double black; /* double trait noir */
+  border-radius: 999px; /* capsule arrondie */
+  background: transparent;
+  color: black;
   font-weight: 700;
-  font-size: 24px;   /* taille plus petite */
+  font-size: 1rem;
   text-decoration: none;
-  border: 2px solid black; /* bordure noire */
-  box-shadow: none;  /* enlever ombre */
-  padding: 0;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   user-select: none;
-  text-align: center;
-  display: inline-block;
+  white-space: nowrap;
 }
 
 nav ul li a:hover,
@@ -517,11 +513,7 @@ nav ul li a.active {
   background-color: black;
   color: white;
   border-color: black;
-  box-shadow: none;
-  outline-offset: 4px;
-  outline: 2.5px solid var(--focus-outline);
 }
-
 
 /* ======== MAIN CONTAINER ======== */
 main {
