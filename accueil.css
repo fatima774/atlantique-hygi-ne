@@ -229,17 +229,7 @@ header h1 {
   max-width: 1000px;
   margin: auto;
 }
-.engagement-item {
-  position: relative;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 25px;
-  text-align: left;
-  overflow: hidden;
-  z-index: 0;
-  background: white;
-  color: black; /* Texte noir */
-}
+
 .engagement-item h3,
 .engagement-item p {
   position: relative;
@@ -249,54 +239,43 @@ header h1 {
   font-weight: 500;
  
 }
-.engagement-qualite::before {
+.engagement-item {
+  position: relative; /* important pour le positionnement absolu des ::before */
+  overflow: hidden;
+  background: white; /* ou transparent selon le rendu */
+  color: black; /* pour que le texte soit lisible */
+  padding: 20px;
+  border-radius: 25px;
+  border: 2px solid #ccc;
+  z-index: 0;
+}
+
+.engagement-item::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-image: url("images/qualite.jpg"); /* Ton image ici */
   background-size: cover;
   background-position: center;
-  filter: blur(1.5px) ; /* Flou + assombrissement léger */
+  filter: blur(2px) brightness(0.6);
   z-index: -1;
   opacity: 1;
+}
+
+/* Spécifique à chaque image */
+.engagement-qualite::before {
+  background-image: url("images/qualite.jpg");
 }
 .engagement-ecologie::before {
-  content: "";
-  position: center;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-image: url("images/ecologie.jpg"); /* <-- Remplace par ton image */
-  background-size: cover;
-  background-position: center;
-  filter: blur(3px) ; /* Flou léger + assombrissement */
-  z-index: -1;
-  opacity: 1;
+  background-image: url("images/ecologie.jpg");
 }
 .engagement-securite::before {
-  content: "";
-  position: center;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-image: url("images/securite.jpg"); /* change par le chemin de ta photo */
-  background-size: cover;
-  background-position: center;
-  filter: blur(3px) ; /* flou léger + assombrir */
-  z-index: -1;
-  opacity: 1;
+  background-image: url("images/securite.jpg");
 }
 .engagement-reactivite::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-image: url("images/reactivite.jpg"); /* mets ici ton image */
-  background-size: cover;
-  background-position: center;
-  filter: blur(3px) ; /* ajuste flou et luminosité */
-  z-index: -1;
-  opacity: 1;
+  background-image: url("images/reactivite.jpg");
 }
+
 
 .organisation {
   background: #eef4f7;
