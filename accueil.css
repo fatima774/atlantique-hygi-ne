@@ -1056,7 +1056,14 @@ footer a:hover i {
 }
 
 @media (max-width: 480px) {
-  .btn-devis { width: 100%; display: block; margin: 0 auto; color:black , background-color:white;}
+  .btn-devis {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    color: black;             /* texte en noir */
+    background-color: white;  /* fond blanc */
+    text-decoration: none;    /* pas de soulignement */
+  }
 }
 
 
