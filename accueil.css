@@ -492,13 +492,13 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;     /* cercle carré */
-  height: 60px;    /* cercle carré */
+  width: 24px;     /* cercle carré */
+  height: 24px;    /* cercle carré */
   border-radius: 50%; /* cercle parfait */
   background: transparent; /* pas de background pour commencer */
   color: black;      /* texte noir */
   font-weight: 700;
-  font-size: 1rem;   /* taille plus petite */
+  font-size: 24px;   /* taille plus petite */
   text-decoration: none;
   border: 2px solid black; /* bordure noire */
   box-shadow: none;  /* enlever ombre */
@@ -506,6 +506,7 @@ nav ul li a {
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   user-select: none;
   text-align: center;
+  display: inline-block;
 }
 
 nav ul li a:hover,
