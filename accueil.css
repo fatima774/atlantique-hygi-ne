@@ -257,13 +257,17 @@ header h1 {
   width: 100%; height: 100%;
   background-size: cover;
   background-position: center;
-  brightness(0.45);
+  filter: brightness(0.7); /* luminosité augmentée */
   transition: filter 0.3s ease;
+  z-index: -1; /* pour que le background soit sous le texte */
 }
+
 .engagement-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  filter: brightness(1); /* optionnel : lumière normale au hover */
 }
+
 /* Spécifique à chaque image */
 .engagement-qualite::before {
   background-image: url("images/qualite.jpg");
