@@ -232,7 +232,7 @@ header h1 {
   max-width: 450px;
   width: 100%;
   height: auto;
- border-radius: var(--border-radius);
+ border-radius: 25px;
   box-shadow: var(--box-shadow-default);
   transition: transform var(--transition-time) ease;
 }
