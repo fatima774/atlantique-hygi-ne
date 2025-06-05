@@ -263,13 +263,37 @@ header h1 {
 }
 .engagement-ecologie::before {
   content: "";
-  position: absolute;
+  position: center;
   top: 0; left: 0;
   width: 100%; height: 100%;
   background-image: url("images/ecologie.jpg"); /* <-- Remplace par ton image */
   background-size: cover;
   background-position: center;
   filter: blur(3px) ; /* Flou léger + assombrissement */
+  z-index: -1;
+  opacity: 1;
+}
+.engagement-securite::before {
+  content: "";
+  position: center;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("images/securite.jpg"); /* change par le chemin de ta photo */
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) brightness(0.7); /* flou léger + assombrir */
+  z-index: -1;
+  opacity: 1;
+}
+.engagement-reactivite::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("images/reactivite.jpg"); /* mets ici ton image */
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) brightness(0.7); /* ajuste flou et luminosité */
   z-index: -1;
   opacity: 1;
 }
