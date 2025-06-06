@@ -545,50 +545,6 @@ header h1 {
   line-height: 1.5;
 }
 /*--fin page services--*/
-.notre-entreprise {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 3rem 1rem;
-  background-color: #f4f4f4;
-  border-top: 3px solid #007b84;
-}
-
-.notre-entreprise .bloc {
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  padding: 2rem;
-  transition: transform 0.3s ease;
-}
-
-.notre-entreprise .bloc:hover {
-  transform: translateY(-5px);
-}
-
-.notre-entreprise h2 {
-  color: #007b84;
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-
-.notre-entreprise p,
-.notre-entreprise li {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-}
-
-.notre-entreprise ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.notre-entreprise li::before {
-  content: "✔";
-  color: #007b84;
-  margin-right: 8px;
-}
 
 body {
   margin: 0;
