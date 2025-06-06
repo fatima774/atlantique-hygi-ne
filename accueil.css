@@ -355,13 +355,30 @@ header h1 {
 /*--fin page accueil--*/
 /*le bouton devis gratuit - page d'accueil*/
 .cta {
-  background-color:  var(--green-medium);
-  color: black;
+  background-color: var(--green-medium);
   padding: 10px 16px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+  text-align: center; /* centrer le bouton */
+  margin-bottom: 60px; /* ← espace sous le bouton */
 }
+
+.btn-devis {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-devis:hover,
+.btn-devis:focus {
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+}
+
 /* photo+texte:accueil */
 .intro-container {
   display: flex;
@@ -1071,13 +1088,5 @@ footer a:hover i {
   .testimonial-cards { flex-direction: column; gap: 24px; }
 }
 
-@media (max-width: 480px) {
-  .btn-devis {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    /* pas de soulignement */
-  }
-}
 
 
