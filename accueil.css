@@ -200,6 +200,35 @@ header h1 {
     cursor: pointer;
     color: white;
   }
+.bloc {
+  position: relative;
+  overflow: hidden;
+  color: white; /* texte lisible */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.bloc::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5) blur(2px); /* flou et assombrissement */
+  z-index: -1;
+  transition: filter 0.3s ease;
+}
+
+/* Images personnalisées pour chaque bloc */
+.bloc-qui::before {
+  background-image: url('images/qui.jpg');
+}
+.bloc-engagements::before {
+  background-image: url('images/engagements.jpg');
+}
+.bloc-moyens::before {
+  background-image: url('images/moyens.jpg');
+}
 
 .engagements {
   background: #f7f9fc;
