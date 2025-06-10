@@ -451,7 +451,7 @@ header h1 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-a.service::before {
+.service::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -462,54 +462,54 @@ a.service::before {
   transition: filter 0.3s ease;
 }
 
-a.service:hover {
+.service:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
-a.service:hover::before {
+.service:hover::before {
   filter: brightness(0.6);
 }
 
-a.service i,
-a.service h3,
-a.service p {
+.service i,
+.service h3,
+.service p {
   position: relative;
   z-index: 1;
 }
 
-a.service i {
+service i {
   font-size: 30px;
   margin-bottom: 8px;
   color: #ffffff;
 }
 
-a.service h3 {
+service h3 {
   font-size: 20px;
   font-weight: bold;
   margin: 5px 0;
 }
 
-a.service p {
+.service p {
   font-size: 14px;
   line-height: 1.4;
 }
-a.service:nth-child(1)::before {
+.service:nth-child(1)::before {
   background-image: url('images/IMG_3159.jpg');
 }
-a.service:nth-child(2)::before {
+.service:nth-child(2)::before {
   background-image: url('images/IMG_3187.jpg');
 }
-a.service:nth-child(3)::before {
+.service:nth-child(3)::before {
   background-image: url('images/IMG_3200.jpg');
 }
-a.service:nth-child(4)::before {
+.service:nth-child(4)::before {
   background-image: url('images/DSC_0944.jpg');
 }
-a.service:nth-child(5)::before {
+.service:nth-child(5)::before {
   background-image: url('images/AH (11).jpg');
 }
-a.service:nth-child(6)::before {
+.service:nth-child(6)::before {
   background-image: url('images/DSC_0937.jpg');
 }
 .moyens-techniques {
