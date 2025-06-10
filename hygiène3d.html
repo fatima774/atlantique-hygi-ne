@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hygiène 3D</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="accueil.css" />
+  </head>
+  <body>
+    <!-- Boutons fixes -->
+    <div class="side-buttons" aria-label="Boutons latéraux">
+      <button type="button" aria-label="Nous contacter" title="Nous contacter" onclick="window.location.href='contact.html'">
+        <i class="fas fa-phone"></i> <span>Nous contacter</span>
+      </button>
+      <button type="button" aria-label="Obtenir un devis" title="Obtenir un devis" onclick="window.location.href='devis.html'">
+        <i class="fas fa-file-alt"></i> <span>Obtenir un devis</span>
+      </button>
+      <button type="button" aria-label="Nos réalisations" title="Nos réalisations" onclick="window.location.href='realisations.html'">
+        <i class="fas fa-briefcase"></i> <span>Nos réalisations</span>
+      </button>
+      <button type="button" class="menu-btn" aria-label="Ouvrir le menu" title="Ouvrir le menu" onclick="openMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Menu latéral -->
+    <div id="sideMenu" aria-hidden="true">
+      <span class="close-btn" onclick="closeMenu()" aria-label="Fermer le menu">&times;</span>
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">À propos</a>
+    </div>
+
+    <script>
+      const sideMenu = document.getElementById("sideMenu");
+      function openMenu() {
+        sideMenu.classList.add("open");
+        sideMenu.setAttribute('aria-hidden', 'false');
+      }
+      function closeMenu() {
+        sideMenu.classList.remove("open");
+        sideMenu.setAttribute('aria-hidden', 'true');
+      }
+    </script>
+
+    <header>
+      <div class="header-container">
+        <img src="images/logo.png" alt="Logo Atlantique Hygiène" class="logo" />
+        <h1>Atlantique Hygiène</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="services.html">Nos Prestations</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="devis.html">Demande de Devis</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">À propos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+  <main class="service-detail">
+    <h1>🧼 Hygiène 3D</h1>
+
+    <p>Le pôle Hygiène 3D d’Atlantique Hygiène est spécialisé dans le traitement et la prévention des nuisibles, dans le respect des normes sanitaires et environnementales. Nos interventions ciblent efficacement les micro-organismes, insectes et rongeurs tout en garantissant la sécurité des personnes et des animaux domestiques.</p>
+
+    <h2>🔧 Méthodes utilisées</h2>
+    <ul>
+     🧪Diagnostic personnalisé<br>
+      🌿Produits homologués et écoresponsables<br>
+     📋Suivi et traçabilité<br>
+      📦Techniques de pose contrôlée<br>
+    </ul>
+
+    <h2>📸 Quelques exemples</h2>
+    <img src="images/nettoyage7.jpg" alt="Exemple nettoyage" />
+    <img src="images/nettoyage8.jpg" alt="Exemple nettoyage" />
+<br>
+    <a class="btn-devis" href="devis.html">Demandez un devis</a>
+  </main>
+ <footer>
+      <p>Suivez-nous sur les réseaux sociaux :</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/nom_de_lentreprise/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/atlantiquehygi%C3%A8ne" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/nom_de_lentreprise/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.youtube.com/channel/UCUjsQBJxvjZMtEFt5k6ZXGg" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@atlantique_hygiene" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+
+      <div class="footer-links">
+        <a href="mentions.html">Mentions légales</a> |
+        <a href="politique.html">Politique de confidentialité</a>
+      </div>
+      <p>&copy; 2025 Atlantique Hygiène - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
