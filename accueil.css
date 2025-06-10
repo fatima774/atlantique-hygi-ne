@@ -1060,7 +1060,7 @@ footer a:hover i {
   .intro-text { text-align: center; }
   .testimonial-cards { flex-direction: column; gap: 24px; }
 }
-.about-bu {
+.about-bul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
