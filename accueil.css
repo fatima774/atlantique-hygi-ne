@@ -674,27 +674,7 @@ transform: scale(1.1);
 }
 
 
-/* --- About bulles specifics --- */
-.about-bulles .bulle h2 {
-  color: var(--green-dark);
-  margin-top: 0;
-  margin-bottom: 18px;
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: 0.01em;
-  text-align: center;
-  border: none;
-  background: none;
-  padding: 0;
-}
-.about-bulles .bulle p,
-.about-bulles .bulle ul {
-  color: var(--text-muted);
-  font-size: 1.07rem;
-  line-height: 1.64;
-  text-align: left;
-  width: 100%;
-}
+
 .bulle i,
 .bulle span {
   position: relative;
@@ -728,13 +708,6 @@ transform: scale(1.1);
   filter: brightness(0.4);
 }
 
-.about-bulles .about-list {
-  list-style: disc inside;
-  padding-left: 0;
-  margin: 0;
-}
-.about-bulles .about-list li { margin-bottom: 12px; color: var(--text-muted); }
-.about-bulles .about-list strong { color: var(--green-medium); }
 
 
 /* ======== TEAM SECTION (interactive) ======== */
@@ -1061,7 +1034,7 @@ footer a:hover i {
 .social-links a:hover i {
   transform: rotate(15deg) scale(1.2);
   color: #009688;
-  font-siza:28px;
+  font-size:28px;
 }
 
 .footer-links {
@@ -1087,6 +1060,49 @@ footer a:hover i {
   .intro-text { text-align: center; }
   .testimonial-cards { flex-direction: column; gap: 24px; }
 }
+.about-bu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  background-color:#f4f4f4;
+}
+.bul {
+  position: relative;        /* important pour le ::before */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 250px;
+  border-radius: 25%;        /* rond */
+  color: #fff;               /* texte blanc pour contraster */
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;          /* pour cacher le ::before en dehors */
+  cursor: default;
+  transition: transform 0.3s ease;
+  background-color: #000;    /* fallback */
+}
+
+.bul:hover {
+transform: scale(1.1);
+}
+
+.bul i ,
+.bul::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6); /* assombrit l'image pour le texte */
+  z-index: 0;
+  transition: filter 0.3s ease;
+}
+
 
 
 
