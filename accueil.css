@@ -1102,7 +1102,49 @@ transform: scale(1.1);
   z-index: 0;
   transition: filter 0.3s ease;
 }
-
-
-
-
+.service-detail img {
+  max-width: 48%;
+  margin: 10px 1% 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.service-detail ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+}
+.service-detail ul li {
+  position: relative;
+  padding-left: 2.5em;
+  margin-bottom: 12px;
+}
+.service-detail ul li::before {
+  content: attr(data-icon);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.service-detail p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+.service-detail h2 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #2a7ae2;
+}
+.service-detail h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+.service-detail {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
