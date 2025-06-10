@@ -1,7 +1,7 @@
 
 :root {
   --green-dark: #479172;       /* Profond */
-  --green-medium: #27ae60;     /* Vert moderne */
+  --green-medium: #15ab53;     /* Vert moderne */
   --green-light: #a8d5ba;      /* Vert pastel */
   --accent: #3ecf8e;           /* Accent vif */
   --shadow-color: rgba(39, 174, 96, 0.15);
@@ -32,7 +32,7 @@ width: 80%;
 .logo {
   width: 90px;
   height: auto; /* pour garder le ratio de l'image */
-  border: 3px solid #006699; /* ou var(--accent) si défini */
+  border: 3px solid #0a8025; /* ou var(--accent) si défini */
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   background-color: white;
   padding: 4px;
@@ -198,7 +198,7 @@ header h1 {
     right: 15px;
     font-size: 36px;
     cursor: pointer;
-    color: white;
+    color: black;
   }
 .bloc {
   position: relative;
@@ -363,7 +363,7 @@ header h1 {
 
 .btn-devis {
   color: black;
-  background-color: white;
+
   text-decoration: none;
   padding: 12px 20px;
   border-radius: 8px;
