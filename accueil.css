@@ -425,13 +425,14 @@ header h1 {
  
 /* ======== SERVICES accueil======== */
 /* === STYLE POUR services.html === */
-.services-grid {
+.services-grid a.service {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   padding: 40px 20px;
   background-color: #f8f9fa;
+  text-decoration: none;
 }
 
 .service {
@@ -450,7 +451,7 @@ header h1 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service::before {
+a.service::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -461,54 +462,54 @@ header h1 {
   transition: filter 0.3s ease;
 }
 
-.service:hover {
+a.service:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
-.service:hover::before {
+a.service:hover::before {
   filter: brightness(0.6);
 }
 
-.service i,
-.service h3,
-.service p {
+a.service i,
+a.service h3,
+a.service p {
   position: relative;
   z-index: 1;
 }
 
-.service i {
+a.service i {
   font-size: 30px;
   margin-bottom: 8px;
   color: #ffffff;
 }
 
-.service h3 {
+a.service h3 {
   font-size: 20px;
   font-weight: bold;
   margin: 5px 0;
 }
 
-.service p {
+a.service p {
   font-size: 14px;
   line-height: 1.4;
 }
-.service:nth-child(1)::before {
+a.service:nth-child(1)::before {
   background-image: url('images/IMG_3159.jpg');
 }
-.service:nth-child(2)::before {
+a.service:nth-child(2)::before {
   background-image: url('images/IMG_3187.jpg');
 }
-.service:nth-child(3)::before {
+a.service:nth-child(3)::before {
   background-image: url('images/IMG_3200.jpg');
 }
-.service:nth-child(4)::before {
+a.service:nth-child(4)::before {
   background-image: url('images/DSC_0944.jpg');
 }
-.service:nth-child(5)::before {
+a.service:nth-child(5)::before {
   background-image: url('images/AH (11).jpg');
 }
-.service:nth-child(6)::before {
+a.service:nth-child(6)::before {
   background-image: url('images/DSC_0937.jpg');
 }
 .moyens-techniques {
@@ -655,6 +656,7 @@ main:focus-within { box-shadow: 0 14px 48px var(--shadow-hover); }
   cursor: default;
   transition: transform 0.3s ease;
   background-color: #000;    /* fallback */
+  text-decoration: none;
 }
 
 .bulle:hover {
