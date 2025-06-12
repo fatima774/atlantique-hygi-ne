@@ -1,6 +1,4 @@
-<?php
-  $pageTitle = "Accueil | Atlantique Hygiène";
-?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
