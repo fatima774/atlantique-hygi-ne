@@ -1,0 +1,223 @@
+<?php
+  $pageTitle = "Accueil | Atlantique Hygiène";
+?>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil | Atlantique Hygiène</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="accueil.css" />
+  </head>
+  <body>
+    <!-- Boutons fixes -->
+    <div class="side-buttons" aria-label="Boutons latéraux">
+      <button type="button" aria-label="Nous contacter" title="Nous contacter" onclick="window.location.href='contact.html'">
+        <i class="fas fa-phone"></i> <span>Nous contacter</span>
+      </button>
+      <button type="button" aria-label="Obtenir un devis" title="Obtenir un devis" onclick="window.location.href='devis.html'">
+        <i class="fas fa-file-alt"></i> <span>Obtenir un devis</span>
+      </button>
+      <button type="button" aria-label="Nos réalisations" title="Nos réalisations" onclick="window.location.href='realisations.html'">
+        <i class="fas fa-briefcase"></i> <span>Nos réalisations</span>
+      </button>
+      <button type="button" class="menu-btn" aria-label="Ouvrir le menu" title="Ouvrir le menu" onclick="openMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Menu latéral -->
+    <div id="sideMenu" aria-hidden="true">
+      <span class="close-btn" onclick="closeMenu()" aria-label="Fermer le menu">&times;</span>
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">À propos</a>
+    </div>
+
+    <script>
+      const sideMenu = document.getElementById("sideMenu");
+      function openMenu() {
+        sideMenu.classList.add("open");
+        sideMenu.setAttribute('aria-hidden', 'false');
+      }
+      function closeMenu() {
+        sideMenu.classList.remove("open");
+        sideMenu.setAttribute('aria-hidden', 'true');
+      }
+    </script>
+
+    <header>
+      <div class="header-container">
+        <img src="images/logo.png" alt="Logo Atlantique Hygiène" class="logo" />
+        <h1>Atlantique Hygiène</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="services.html">Nos Prestations</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="devis.html">Demande de Devis</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">À propos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="intro-container">
+          <div class="intro-image">
+            <img src="images/IMG_3219.jpg" alt="photo d'accueil" />
+          </div>
+          <div class="intro-text">
+            <h2>
+              <span class="light">Bienvenue chez</span><br />
+              <span class="bold">Atlantique Hygiène</span>
+            </h2>
+            <p>
+              Votre partenaire en propreté écoresponsable à Colombes et en Île-de-France.<br />
+              Nettoyage, hygiène 3D, espaces verts, manutention et plus encore.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="eco-bulles">
+<a href="nettoyagecourant.html" class="bulle">
+  <i class="fas fa-broom"></i>
+  <span>Nettoyage courant</span>
+</a>
+<a href="nettoyagespécifique.html" class="bulle">
+  <i class="fas fa-tools"></i>
+  <span>Nettoyage spécifique</span>
+</a>
+   <a href="espacesverts.html" class="bulle">
+  <i class="fas fa-leaf"></i>
+  <span>Espaces verts</span>
+</a>   
+<a href="hygiène3d.html" class="bulle">
+  <i class="fas fa-bug"></i>
+  <span>Hygiène 3D</span>
+</a>      
+     <a href="manutention.html" class="bulle">
+  <i class="fas fa-box"></i>
+  <span>Manutention</span>
+</a>      
+  <a href="déchets.html" class="bulle">
+  <i class="fas fa-recycle"></i>
+  <span>Gestion des déchets</span>
+</a> 
+
+      </section>
+
+      <section class="cta">
+        <a href="contact.html" class="btn-devis">Devis Gratuit</a>
+      </section>
+
+      <section class="notre-entreprise">
+       <div class="bloc bloc-qui">
+          <h2>Qui sommes-nous ?</h2>
+          <p>
+            Créée en 2004, Atlantique Hygiène est une entreprise à taille humaine basée à Colombes. Nous intervenons sur toute l'Île-de-France auprès de professionnels, collectivités, syndics et établissements scolaires.
+          </p>
+        </div>
+ <div class="bloc bloc-engagements">
+          <h2>Nos engagements</h2>
+          <ul>
+            <strong>Qualité :</strong> suivi rigoureux, agents formés, responsable de secteur dédié.</li>
+            <li><strong>Écoresponsabilité :</strong> produits certifiés, tri des déchets, optimisation énergétique.</li>
+            <li><strong>Sécurité :</strong> respect des protocoles, port d'EPI, formations régulières.</li>
+            <li><strong>Disponibilité :</strong> ligne directe, astreinte technique, réactivité d'intervention.</li>
+          </ul>
+        </div>
+        <div class="bloc bloc-moyens">
+          <h2>Nos moyens</h2>
+          <p>
+            Nos équipes disposent de matériels performants : auto-laveuses, monobrosses, aspirateurs industriels, etc. Nous assurons des livraisons mensuelles de consommables et mettons en place un cahier de liaison pour un suivi transparent.
+          </p>
+        </div>
+      </section>
+<section class="engagements">
+  <h2>Nos engagements</h2>
+  <div class="engagement-grid">
+    <div class="engagement-item engagement-qualite">
+      <h3> Qualité & Suivi</h3>
+      <p>Contrôles qualité réguliers avec actions correctives pour garantir une prestation irréprochable.</p>
+    </div>
+    <div class="engagement-item engagement-ecologie">
+      <h3> Écologie</h3>
+      <p>Utilisation de produits écoresponsables, réduction d’eau et d’énergie, tri des déchets systématique.</p>
+    </div>
+    <div class="engagement-item engagement-securite">
+      <h3> Sécurité & Formation</h3>
+      <p>Équipements de protection individuelle (EPI), formations continues de nos agents.</p>
+    </div>
+    <div class="engagement-item engagement-reactivite">
+      <h3> Réactivité</h3>
+      <p>Service d’astreinte 7j/7, interventions d’urgence rapides sur simple appel.</p>
+    </div>
+  </div>
+</section>
+
+<section class="organisation">
+  <h2>Notre organisation</h2>
+  <div class="org-items">
+    <div class="org-card">
+      <i class="fas fa-cogs"></i>
+      <p><strong>Matériels utilisés :</strong> auto-laveuses, aspirateurs industriels, nettoyeurs haute pression…</p>
+    </div>
+    <div class="org-card">
+      <i class="fas fa-user-tie"></i>
+      <p><strong>Tenues des agents :</strong> uniformes identifiables et toujours impeccables.</p>
+    </div>
+    <div class="org-card">
+      <i class="fas fa-comments"></i>
+      <p><strong>Communication client :</strong> cahier de liaison, photos avant/après, retours rapides.</p>
+    </div>
+  </div>
+</section>
+
+
+      <section class="testimonials">
+        <h2>Avis de nos clients</h2>
+        <div class="testimonial-cards">
+          <div class="card">
+            <img src="images/client1.jpg" alt="Sophie M." class="client-photo" />
+            <p class="quote">« Atlantique Hygiène a transformé nos bureaux ! Service impeccable et écologique. »</p>
+            <p class="client-name">Louis M., Directeur</p>
+          </div>
+          <div class="card">
+            <img src="images/client2.jpg" alt="Karim L." class="client-photo" />
+            <p class="quote">« Professionnels, ponctuels, à l'écoute. Résultats toujours au rendez-vous. »</p>
+            <p class="client-name">Nadia R., Gérante d’école</p>
+          </div>
+          <div class="card">
+            <img src="images/client3.jpg" alt="Nadia R." class="client-photo" />
+            <p class="quote">« Je recommande vivement Atlantique Hygiène pour leur sérieux et savoir-faire. »</p>
+            <p class="client-name">Karim L., Responsable Facility</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Suivez-nous sur les réseaux sociaux :</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/nom_de_lentreprise/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/atlantiquehygi%C3%A8ne" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/nom_de_lentreprise/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.youtube.com/channel/UCUjsQBJxvjZMtEFt5k6ZXGg" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@atlantique_hygiene" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+
+      <div class="footer-links">
+        <a href="mentions.html">Mentions légales</a> |
+        <a href="politique.html">Politique de confidentialité</a>
+      </div>
+      <p>&copy; 2025 Atlantique Hygiène - Tous droits réservés</p>
+    </footer>
+  </body>
+</html>
