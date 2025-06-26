@@ -1,4 +1,150 @@
+<?php
+// Connexion à la base de données
+try {
+    $pdo = new PDO('mysql:host=localhost;dbname=atlantique_hygiene;charset=utf8', 'root', '');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $equipements = $pdo->query("SELECT * FROM equipements")->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    // En cas d’erreur, on stocke un tableau vide pour éviter les erreurs
+    $equipements = [];
+}
+?>
 <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nos Services | Atlantique Hygiène</title>
+  <link rel="stylesheet" href="accueil.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/logo.png" alt="Logo Atlantique Hygiène" class="logo" />
+      <h1>Atlantique Hygiène</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.php" class="active">Nos Prestations</a></li>
+        <li><a href="realisations.html">Réalisations</a></li>
+        <li><a href="devis.html">Demande de Devis</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="services">
+      <h2>Nos Prestations</h2>
+      <div class="services-grid">
+        <div class="service">
+          <i class="fas fa-broom"></i>
+          <h3>Nettoyage courant</h3>
+          <p>Lavage des sols, vitres, moquettes, dépoussiérage et entretien régulier des locaux.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-tools"></i>
+          <h3>Nettoyage spécifique</h3>
+          <p>Fin de chantier, sinistres, graffitis, situations exceptionnelles et interventions ponctuelles.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-leaf"></i>
+          <h3>Espaces verts</h3>
+          <p>Entretien des espaces naturels : tonte, taille, évacuation des déchets verts.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-bug"></i>
+          <h3>Hygiène 3D</h3>
+          <p>Désinfection, désinsectisation, dératisation avec des produits homologués et respectueux de l’environnement.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-box"></i>
+          <h3>Manutention</h3>
+          <p>Déplacement d’archives, mobiliers, pose de signalétique et petits travaux de maintenance.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-recycle"></i>
+          <h3>Gestion des déchets</h3>
+          <p>Collecte, tri, valorisation des déchets avec des partenaires écoresponsables.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="moyens-techniques">
+      <h2>Nos moyens techniques</h2>
+      <div class="equipement-grid">
+        <?php if (!empty($equipements)): ?>
+          <?php foreach ($equipements as $equipement): ?>
+            <div class="equipement">
+              <i class="<?= htmlspecialchars($equipement['icone']) ?>"></i>
+              <h3><?= htmlspecialchars($equipement['nom']) ?></h3>
+              <p><?= htmlspecialchars($equipement['description']) ?></p>
+            </div>
+          <?php endforeach; ?>
+        <?php else: ?>
+          <p>Aucun équipement trouvé pour le moment.</p>
+        <?php endif; ?>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Suivez-nous sur les réseaux sociaux :</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/nom_de_lentreprise/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/atlantiquehygi%C3%A8ne" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/nom_de_lentreprise/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.youtube.com/channel/UCUjsQBJxvjZMtEFt5k6ZXGg" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.tiktok.com/@atlantique_hygiene" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <div class="side-buttons" aria-label="Boutons latéraux">
+      <button type="button" aria-label="Nous contacter" title="Nous contacter" onclick="window.location.href='contact.html'">
+        <i class="fas fa-phone"></i> <span>Nous contacter</span>
+      </button>
+      <button type="button" aria-label="Obtenir un devis" title="Obtenir un devis" onclick="window.location.href='devis.html'">
+        <i class="fas fa-file-alt"></i> <span>Obtenir un devis</span>
+      </button>
+      <button type="button" aria-label="Nos réalisations" title="Nos réalisations" onclick="window.location.href='realisations.html'">
+        <i class="fas fa-briefcase"></i> <span>Nos réalisations</span>
+      </button>
+      <button type="button" class="menu-btn" aria-label="Ouvrir le menu" title="Ouvrir le menu" onclick="openMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <div id="sideMenu" aria-hidden="true">
+      <span class="close-btn" onclick="closeMenu()" aria-label="Fermer le menu">&times;</span>
+      <a href="index.html">Accueil</a>
+      <a href="services.php">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">À propos</a>
+    </div>
+
+    <script>
+      const sideMenu = document.getElementById("sideMenu");
+      function openMenu() {
+        sideMenu.classList.add("open");
+        sideMenu.setAttribute('aria-hidden', 'false');
+      }
+      function closeMenu() {
+        sideMenu.classList.remove("open");
+        sideMenu.setAttribute('aria-hidden', 'true');
+      }
+    </script>
+
+    <div class="footer-links">
+      <a href="mentions.html">Mentions légales</a> |
+      <a href="politique.html">Politique de confidentialité</a>
+    </div>
+    <p>&copy; 2025 Atlantique Hygiène - Tous droits réservés</p>
+  </footer>
+</body>
+</html>
+<!--<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -111,7 +257,7 @@
     
 
 <!-- Menu latéral -->
-  <div class="side-buttons" aria-label="Boutons latéraux">
+ <!-- <div class="side-buttons" aria-label="Boutons latéraux">
       <button type="button" aria-label="Nous contacter" title="Nous contacter" onclick="window.location.href='contact.html'">
         <i class="fas fa-phone"></i> <span>Nous contacter</span>
       </button>
@@ -127,7 +273,7 @@
     </div>
 
     <!-- Menu latéral -->
-    <div id="sideMenu" aria-hidden="true">
+   <!-- <div id="sideMenu" aria-hidden="true">
       <span class="close-btn" onclick="closeMenu()" aria-label="Fermer le menu">&times;</span>
       <a href="index.html">Accueil</a>
       <a href="services.html">Services</a>
@@ -154,4 +300,4 @@
     <p>&copy; 2025 Atlantique Hygiène - Tous droits réservés</p> 
   </footer>
 </body>
-</html>
+</html>-->
